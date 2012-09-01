@@ -61,6 +61,7 @@ int* M(int *matrix, int dimension, int i, int j);
  * Future work: 
  * - main() is too big.  Move argument handling to a separate function.
  * - add details of various algorithms used.
+ * - keep variable names consistent.
  *
  */
 int main(int argc, char *argv[])
