@@ -10,10 +10,12 @@
  * Author: Chandan Kumar chandan.kumar@students.iiit.ac.in
  * Date: 2012-08-20
  *
- * Assignment 1.a of Parallel Programming by Suresh Purini during Monsoon 2012
+ * Assignment 1.a of Parallel Programming course during 
+ * Monsoon 2012 semester offered by Suresh Purini.
  * 
  * In-place matrix transpose.
- * Input size assumed to be power of 2. Matrix assumed to be square i.e n x n.
+ * Input size assumed to be power of 2. 
+ * Matrix assumed to be square i.e n x n.
  *
  */
 
@@ -21,19 +23,46 @@ int* allocateMatrix(int length);
 int* generateMatrix(int length);
 int* loadMatrix(char *infile, int length);
 
-void transpose(int *matrix, int tilesize, int length);
-void transpose1Tiled(int *matrix, int length, int tilesize);
-void transpose2Tiled(int *matrix, int length, int tile1size, int tile2size);
-void transposeCacheOblivious(int *matrix, int length, int tilesize, int row, int column);
+// matrix can be a sub-matrix (sxs) of another matrix (nxn).
+void transpose(int *matrix, int size_s, int dimension_n);
+// matrix can be a sub-matrix (nxn) of another matrix (NxN). Use tilesize s for the algorithm. 
+void transpose1Tiled(int *matrix, int dimension_N, int size_n, int tilesize_s);
+// two tiled transpose of matrix (nxn) with tile size as s1 and s2.
+void transpose2Tiled(int *matrix, int dimension_n, int tile1size_s1, int tile2size_s2);
 
-void swapTiles(int *matrix1, int *matrix2, int tilesize, int length);
+void transposeCacheOblivious(int *matrix, int length_N, int tilesize_n, int row_i, int column_j);
+// matrices can be sub-matrices 
+void swapTiles(int *matrix1, int *matrix2, int tilesize_s, int length_n);
 
 void printm(int *matrix, int length);
 void printmf(int *matrix, int length, const char *filename);
 
 int* M(int *matrix, int dimension, int i, int j);
 
-
+/**
+ * Sample arguments
+ *
+ * To transpose a randomly generated 64x64 matrix using basic algorithm 
+ * (both input and output displayed on screen)
+ *              ./transposeIP -basic -n64
+ *
+ * To transpose a randomly generated 128x128 matrix using 1tiled algorithm 
+ * with tile size 16
+ *              ./transposeIP -1tiled -n 128 -s1 16
+ *
+ * To transpose a randomly generated 128x128 matrix using 2tiled algorithm
+ * with level 1 tile size 16 and level 2 tile size 4
+ *              ./transposeIP -2tiled -n 128 -s1 16 -s2 4
+ *
+ * To transpose a 4096x4096 matrix using cache oblivious algorithm with input 
+ * file infile.txt and directing output to outfile.txt
+ *              ./transposeIP -cacheob -i infile.txt -n 4096 -o outfile.txt
+ *
+ * Future work: 
+ * - main() is too big.  Move argument handling to a separate function.
+ * - add details of various algorithms used.
+ *
+ */
 int main(int argc, char *argv[])
 {
     int* m;
@@ -94,7 +123,7 @@ int main(int argc, char *argv[])
             if (tile1size == 0) {
                 tile1size = TILE1SIZE;
             }
-            transpose1Tiled(m, dimension, tile1size);
+            transpose1Tiled(m, dimension, dimension, tile1size);
             break;
         case '2':
             if (tile2size == 0) {
@@ -148,11 +177,12 @@ int* M(int*m, int N, int i, int j)
 }
 
 /**
- *
+ * (i1, j1) is the position of the nxn sub-matrix in an NxN matrix.
+ * s is the tilesize.
  * It is important to have the right tile size for optimal performance.
  * Find this using (?)
  */
-void transpose1Tiled(int *m, int n, int s)
+void transpose1Tiled(int *m, int N, int n, int s)
 {
     int i, j;
     
@@ -163,7 +193,7 @@ void transpose1Tiled(int *m, int n, int s)
             for (j=i; j<n; j+=s) {
                 //transpose 1st tile
                 //A(i, j)(i+s, j+s) is the 1st tile.
-                transpose(M(m,n,i,j),s,n);
+                transpose(M(m,N,i,j), s, N);
                 if (i==j) {
                     //only the above transpose needed since this is a diagonal tile.
                     //only tiles above/below the diagonal need swapping and transposing.
@@ -172,10 +202,10 @@ void transpose1Tiled(int *m, int n, int s)
                 
                 //transpose 2nd tile
                 //A(j, i)(j+s, i+s) is the 2nd tile.
-                transpose(M(m,n,j,i), s, n);
+                transpose(M(m,N,j,i), s, N);               
 
                 //swap the tiles
-                swapTiles(M(m,n,i,j), M(m,n,j,i), s, n);
+                swapTiles(M(m,N,i,j), M(m,N,j,i), s, N);
             }
         }    
     }
@@ -195,15 +225,14 @@ void transpose2Tiled(int *m, int n, int s1, int s2)
     } else {
         for (i=0; i<n; i+=s1) {
             for (j=i; j<n; j+=s1) {
-                //transpose 1st tile using subtiling.
-                transpose1Tiled(M(m,n,i,j), n, s2);
-                
+                //transpose 1st tile using sub-tiling.
+                transpose1Tiled(M(m,n,i,j), n, s1, s2);
                 if (i==j) {
                     continue;
                 }
                 
-                //transpose 2nd tile using subtiling.
-                transpose1Tiled(M(m,n,j,i), n, s2);
+                //transpose 2nd tile using sub-tiling.
+                transpose1Tiled(M(m,n,j,i), n, s1, s2);
                 
                 //swap the tiles.
                 swapTiles(M(m,n,i,j), M(m,n,j,i), s1, n);
