@@ -1,0 +1,197 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		17EE904A15ECAAD900D995CF /* transposeIP.c in Sources */ = {isa = PBXBuildFile; fileRef = 17EE904915ECAAD900D995CF /* transposeIP.c */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		17EE903A15EA869300D995CF /* libtranspose.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libtranspose.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		17EE904915ECAAD900D995CF /* transposeIP.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = transposeIP.c; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		17EE903715EA869300D995CF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		17EE902F15EA869200D995CF = {
+			isa = PBXGroup;
+			children = (
+				17EE904915ECAAD900D995CF /* transposeIP.c */,
+				17EE903B15EA869300D995CF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		17EE903B15EA869300D995CF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				17EE903A15EA869300D995CF /* libtranspose.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		17EE903815EA869300D995CF /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		17EE903915EA869300D995CF /* transpose */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 17EE903E15EA869300D995CF /* Build configuration list for PBXNativeTarget "transpose" */;
+			buildPhases = (
+				17EE903615EA869300D995CF /* Sources */,
+				17EE903715EA869300D995CF /* Frameworks */,
+				17EE903815EA869300D995CF /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = transpose;
+			productName = transpose;
+			productReference = 17EE903A15EA869300D995CF /* libtranspose.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		17EE903115EA869200D995CF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 17EE903415EA869200D995CF /* Build configuration list for PBXProject "transpose" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 17EE902F15EA869200D995CF;
+			productRefGroup = 17EE903B15EA869300D995CF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				17EE903915EA869300D995CF /* transpose */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		17EE903615EA869300D995CF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17EE904A15ECAAD900D995CF /* transposeIP.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		17EE903C15EA869300D995CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		17EE903D15EA869300D995CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		17EE903F15EA869300D995CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EXECUTABLE_PREFIX = lib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		17EE904015EA869300D995CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EXECUTABLE_PREFIX = lib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		17EE903415EA869200D995CF /* Build configuration list for PBXProject "transpose" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17EE903C15EA869300D995CF /* Debug */,
+				17EE903D15EA869300D995CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		17EE903E15EA869300D995CF /* Build configuration list for PBXNativeTarget "transpose" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17EE903F15EA869300D995CF /* Debug */,
+				17EE904015EA869300D995CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 17EE903115EA869200D995CF /* Project object */;
+}
