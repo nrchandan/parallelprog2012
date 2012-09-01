@@ -4,16 +4,6 @@
 
 #define LENGTH 64
 #define TILESIZE 16
-//
-//int *m; //matrix
-//int N; //dimension of the matrix
-
-/*
- int m[LENGTH][LENGTH] = 
- {{11, 12, 13},
- {21, 22, 23},
- {31, 32, 33}};
- */
 
 /*
  * Input size assumed to be power of 2. Matrix assumed to be square i.e n x n.
@@ -193,38 +183,13 @@ void transposeCacheOblivious(int *m, int N, int n, int i, int j)
         temp = *M(m,N,i,j+1);
         *M(m,N,i,j+1) = *M(m,N,i+1,j);
         *M(m,N,i+1,j) = temp;
-        return;
-//        temp=m[0][1];
-//        m[0][1]=m[1][0];
-//        m[1][0]=temp;
-        
+        return;        
     }
-//    transposeCacheOblivious(M(m,N,i,j), N, n/2, i, j);
-//    printm(m,N);
-//    transposeCacheOblivious(M(m,N,i,j+n/2), N, n/2, i, j+n/2);
-//    printm(m,N);
-//    transposeCacheOblivious(M(m,N,i+n/2,j), N, n/2, i+n/2, j);
-//    printm(m,N);
-//    transposeCacheOblivious(M(m,N,i+n/2,j+n/2), N, n/2, i+n/2, j+n/2);
-//    printm(m,N);
-//    swapTiles(M(m,N,i,j+n/2), M(m,N,j+n/2,i), n/2, n);
     transposeCacheOblivious(m, N, n/2, i, j);
-//    printm(m,N);
     transposeCacheOblivious(m, N, n/2, i, j+n/2);
-//    printm(m,N);
     transposeCacheOblivious(m, N, n/2, i+n/2, j);
-//    printm(m,N);
     transposeCacheOblivious(m, N, n/2, i+n/2, j+n/2);
-//    printm(m,N);
-//    printf("Swapping tiles at position %d and %d\n", N*i+j+n/2, N*(i+n/2)+j);
     swapTiles(M(m,N,i,j+n/2), M(m,N,i+n/2,j), n/2, N);
-    
-//    printm(m,N);
-//    transposeCacheOblivious(&m[0,0], n/2);
-//    transposeCacheOblivious(&m[0,n/2], n/2);
-//    transposeCacheOblivious(&m[n/2,0], n/2);
-//    transposeCacheOblivious(&m[n/2,n/2], n/2);
-    //swap m[0][n/2] with m[n/2][0]
 }
 
 void swapTiles(int *a, int *b, int s, int n)
