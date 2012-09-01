@@ -3,9 +3,16 @@
 #include<string.h>
 
 #define LENGTH 64
-#define TILESIZE 16
+#define TILE1SIZE 16
+#define TILE2SIZE 4
 
 /*
+ * Author: Chandan Kumar chandan.kumar@students.iiit.ac.in
+ * Date: 2012-08-20
+ *
+ * Assignment 1.a of Parallel Programming by Suresh Purini during Monsoon 2012
+ * 
+ * In-place matrix transpose.
  * Input size assumed to be power of 2. Matrix assumed to be square i.e n x n.
  *
  */
@@ -16,6 +23,7 @@ int* loadMatrix(char *infile, int length);
 
 void transpose(int *matrix, int tilesize, int length);
 void transpose1Tiled(int *matrix, int length, int tilesize);
+void transpose2Tiled(int *matrix, int length, int tile1size, int tile2size);
 void transposeCacheOblivious(int *matrix, int length, int tilesize, int row, int column);
 
 void swapTiles(int *matrix1, int *matrix2, int tilesize, int length);
@@ -29,9 +37,9 @@ int* M(int *matrix, int dimension, int i, int j);
 int main(int argc, char *argv[])
 {
     int* m;
-    char *usage = "Usage: transpose -(basic|1tiled|2tiled|cacheob) [[-i <infile>] -n <dimension>] [-s tilesize] [-o <outfile>] \n";
-    char *infile=NULL, *outfile=NULL, mode;
-    int dimension=0, tilesize=0;
+    const char *usage = "Usage: transposeIP -(basic|1tiled|2tiled|cacheob) [[-i <infile>] -n <dimension>] [-s1 tilesize] [-s2 tilesize] [-o <outfile>] \n";
+    char *infile=NULL, *outfile=NULL, mode='b';
+    int dimension=0, tile1size=0, tile2size=0;
     int i;
     
     
@@ -48,8 +56,10 @@ int main(int argc, char *argv[])
             outfile = argv[++i];
         } else if (!strcmp("-n", argv[i])) {
             sscanf(argv[++i], "%d", &dimension);
-        } else if (!strcmp("-s", argv[i])) {
-            sscanf(argv[++i], "%d", &tilesize);
+        } else if (!strcmp("-s1", argv[i])) {
+            sscanf(argv[++i], "%d", &tile1size);
+        } else if (!strcmp("-s2", argv[i])) {
+            sscanf(argv[++i], "%d", &tile2size);
         } else if (!strcmp("-basic", argv[i])   ||
                    !strcmp("-1tiled", argv[i])  ||
                    !strcmp("-2tiled", argv[i])  ||
@@ -57,7 +67,6 @@ int main(int argc, char *argv[])
             mode=argv[i][1]; //mode = 'b', '1', '2' or 'c'
         }
     }
-//    printf("infile=%s outfile=%s dimension=%d mode=%c\n", infile, outfile, dimension, mode);
     
     if (infile == NULL) {
         // no input file provided
@@ -73,10 +82,7 @@ int main(int argc, char *argv[])
         }
         m = loadMatrix(infile, dimension);
     }
-    if (tilesize == 0) {
-        tilesize = TILESIZE;
-    }
-//    printf("infile=%s outfile=%s dimension=%d mode=%c\n", infile, outfile, dimension, mode);
+
     printf("\nBefore Transpose: \n");
     printm(m, dimension);
     
@@ -85,14 +91,23 @@ int main(int argc, char *argv[])
             transpose(m, dimension, dimension);
             break;
         case '1':
-            transpose1Tiled(m, dimension, tilesize);
+            if (tile1size == 0) {
+                tile1size = TILE1SIZE;
+            }
+            transpose1Tiled(m, dimension, tile1size);
+            break;
+        case '2':
+            if (tile2size == 0) {
+                tile2size = TILE2SIZE;
+            }
+            transpose2Tiled(m, dimension, tile1size, tile2size);
             break;
         case 'c':
             transposeCacheOblivious(m, dimension, dimension, 0, 0);
             break;
         default:
-            printf("%s option not recognized or not implemented\n", argv[1]);
-            printf("Usage: transpose -(basic|1tiled|2tiled) <inputfile>\n");
+            printf("Option not recognized or not implemented\n");
+            printf("%s", usage);
             exit(0);
     }
     
@@ -139,36 +154,61 @@ int* M(int*m, int N, int i, int j)
  */
 void transpose1Tiled(int *m, int n, int s)
 {
-//    int i, j, temp;
-    int i1, j1;
+    int i, j;
     
     if (n<=s) {
         transpose(m, n, n);
     } else {
-        for (i1=0; i1<n; i1+=s) {
-            for (j1=i1; j1<n; j1+=s) {
-                //printf("i1=%d, j1=%d\n", i1, j1);
-                
+        for (i=0; i<n; i+=s) {
+            for (j=i; j<n; j+=s) {
                 //transpose 1st tile
-                //A(i1, j1)(i1+s, j1+s) is the 1st tile.
-                
-                transpose(M(m,n,i1,j1),s,n);
-                if (i1==j1) {
+                //A(i, j)(i+s, j+s) is the 1st tile.
+                transpose(M(m,n,i,j),s,n);
+                if (i==j) {
                     //only the above transpose needed since this is a diagonal tile.
                     //only tiles above/below the diagonal need swapping and transposing.
                     continue;
                 }
                 
                 //transpose 2nd tile
-                //A(j1, i1)(j1+s, i1+s) is the 2nd tile.
-                
-                transpose(M(m,n,j1,i1), s, n);
+                //A(j, i)(j+s, i+s) is the 2nd tile.
+                transpose(M(m,n,j,i), s, n);
 
                 //swap the tiles
-
-                swapTiles(M(m,n,i1,j1), M(m,n,j1,i1), s, n);
+                swapTiles(M(m,n,i,j), M(m,n,j,i), s, n);
             }
-        }        
+        }    
+    }
+}
+
+
+void transpose2Tiled(int *m, int n, int s1, int s2)
+{
+    int i, j;
+    
+    if (s1<=s2) {
+        printf("Tilesize s1 must be greater than tilesize s2\n");
+        exit(0);
+    }
+    if (n<=s1) {
+        transpose(m, n, n);
+    } else {
+        for (i=0; i<n; i+=s1) {
+            for (j=i; j<n; j+=s1) {
+                //transpose 1st tile using subtiling.
+                transpose1Tiled(M(m,n,i,j), n, s2);
+                
+                if (i==j) {
+                    continue;
+                }
+                
+                //transpose 2nd tile using subtiling.
+                transpose1Tiled(M(m,n,j,i), n, s2);
+                
+                //swap the tiles.
+                swapTiles(M(m,n,i,j), M(m,n,j,i), s1, n);
+            }
+        }
     }
 }
 
@@ -207,6 +247,10 @@ void swapTiles(int *a, int *b, int s, int n)
     }
 }
 
+/**
+ * Print matrix in stdout.
+ *
+ */
 void printm(int *m, int n)
 {
     int i, j;
@@ -219,6 +263,10 @@ void printm(int *m, int n)
     }
 }
 
+/**
+ * Print matrix in the specified file.
+ *
+ */
 void printmf(int *m, int n, const char *filename)
 {
     int i, j;
