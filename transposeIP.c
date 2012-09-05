@@ -1,6 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
+#include<Accelerate/Accelerate.h>
 
 #define LENGTH 64
 #define TILE1SIZE 16
@@ -10,7 +11,7 @@
  * Author: Chandan Kumar chandan.kumar@students.iiit.ac.in
  * Date: 2012-08-20
  *
- * Assignment 1.a of Parallel Programming course during 
+ * Assignment 1.1 of Parallel Programming course during 
  * Monsoon 2012 semester offered by Suresh Purini.
  * 
  * In-place matrix transpose.
@@ -25,6 +26,10 @@ int* loadMatrix(char *infile, int length);
 
 // matrix can be a sub-matrix (sxs) of another matrix (nxn).
 void transpose(int *matrix, int size_s, int dimension_n);
+
+// placeholder for BLAS optimized transpose.
+void transposeBLAS(int *matrix, int dimension_n);
+
 // matrix can be a sub-matrix (nxn) of another matrix (NxN). Use tilesize s for the algorithm. 
 void transpose1Tiled(int *matrix, int dimension_N, int size_n, int tilesize_s);
 // two tiled transpose of matrix (nxn) with tile size as s1 and s2.
@@ -175,6 +180,11 @@ int* M(int*m, int N, int i, int j)
 {
 //    printf("cell number is %d ", i*N+j);
     return m+i*N+j;
+}
+
+void transposeBLAS(int *m, int n)
+{
+    
 }
 
 /**
