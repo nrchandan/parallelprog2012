@@ -333,7 +333,10 @@ int* generateMatrix(int n)
     for (i=0; i<n; i++) {
         for (j=0; j<n; j++) {
 //            m[i][j] = rand()%10;
-            *M(m,n,i,j) = rand()%10;
+//            *M(m,n,i,j) = rand()%10;
+            // Modulo 10 so that each number is only 1 digit -
+            // easy for displaying larger matrices on screen.
+            *M(m,n,i,j) = j%10;
 //            *(m+i*N+j)= rand()%10;
         }
     }
