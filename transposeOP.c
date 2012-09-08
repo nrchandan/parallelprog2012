@@ -30,7 +30,8 @@ void transpose1Tiled(int *matrix1, int *matrix2, int row_M, int column_N, int ro
 
 void transpose2Tiled(int *matrix1, int *matrix2, int row_m, int column_n, int tile1size_s1, int tile2size_s2);
 
-//void transposeCacheOblivious(int *matrix, int length_N, int tilesize_n, int row_i, int column_j);
+// row_M and column N are needed in order to determine correct i and j.
+void transposeCacheOblivious(int *matrix1, int *matrix2, int row_M, int column_N, int row_m, int column_n, int position_i, int position_j);
 // matrices can be sub-matrices 
 //void swapTiles(int *matrix1, int *matrix2, int tilesize_s, int length_n);
 
@@ -134,13 +135,16 @@ int main(int argc, char *argv[])
             transpose1Tiled(a, b, row, column, row, column, tile1size);
             break;
         case '2':
+            if (tile1size == 0) {
+                tile1size = TILE1SIZE;
+            }
             if (tile2size == 0) {
                 tile2size = TILE2SIZE;
             }
-//            transpose2Tiled(m, dimension, tile1size, tile2size);
+            transpose2Tiled(a, b, row, column, tile1size, tile2size);
             break;
         case 'c':
-//            transposeCacheOblivious(m, dimension, dimension, 0, 0);
+//            transposeCacheOblivious(a, b, row, column, row, column, 0, 0);
             break;
         default:
             printf("Option not recognized or not implemented\n");
@@ -203,9 +207,9 @@ void transpose1Tiled(int *a, int *b, int M, int N, int m, int n, int s)
         }    
     }
 }
-/*
 
-void transpose2Tiled(int *m, int n, int s1, int s2)
+
+void transpose2Tiled(int *a, int *b, int m, int n, int s1, int s2)
 {
     int i, j;
     
@@ -214,44 +218,41 @@ void transpose2Tiled(int *m, int n, int s1, int s2)
         exit(0);
     }
     if (n<=s1) {
-        transpose(m, n, n);
+        transpose(a, b, m, n, m, n);
     } else {
-        for (i=0; i<n; i+=s1) {
-            for (j=i; j<n; j+=s1) {
+        for (i=0; i<m; i+=s1) {
+            for (j=0; j<n; j+=s1) {
                 //transpose 1st tile using sub-tiling.
-                transpose1Tiled(M(m,n,i,j), n, s1, s2);
-                if (i==j) {
-                    continue;
-                }
-                
-                //transpose 2nd tile using sub-tiling.
-                transpose1Tiled(M(m,n,j,i), n, s1, s2);
-                
-                //swap the tiles.
-                swapTiles(M(m,n,i,j), M(m,n,j,i), s1, n);
+                transpose1Tiled(A(a,n,i,j), A(b,m,j,i), m, n, s1, s1, s2);
             }
         }
     }
 }
+/*
 
-void transposeCacheOblivious(int *m, int N, int n, int i, int j)
+void transposeCacheOblivious(int *a, int *b, int M, int N, int m, int n, int i, int j)
 {   
-    int temp;
 //    printf("N= %d, n=%d, i=%d, j=%d\n", N, n, i, j);
     if (n==2) {
         //base case: if matrix size is 2x2, swap m(0,1) with m(1,0)
 //        printf("Swapping %d, %d\n", *A(m,N,i,j+1), *A(m,N,i+1,j));
 //        printf("at cell number %d and %d\n", N*i+j+1, N*(i+1)+j);
-        temp = *A(m,N,i,j+1);
-        *A(m,N,i,j+1) = *A(m,N,i+1,j);
-        *A(m,N,i+1,j) = temp;
+//        temp = *A(m,N,i,j+1);
+//        *A(m,N,i,j+1) = *A(m,N,i+1,j);
+//        *A(m,N,i+1,j) = temp;
+        transpose(a, b, M, N, m, n);
+        
         return;        
     }
-    transposeCacheOblivious(m, N, n/2, i, j);
-    transposeCacheOblivious(m, N, n/2, i, j+n/2);
-    transposeCacheOblivious(m, N, n/2, i+n/2, j);
-    transposeCacheOblivious(m, N, n/2, i+n/2, j+n/2);
-    swapTiles(M(m,N,i,j+n/2), M(m,N,i+n/2,j), n/2, N);
+    transposeCacheOblivious(a, b, M, N, m/2, n/2, i, j);
+    transposeCacheOblivious(a, b, M, N, m/2, n/2, i, j+n/2);
+    transposeCacheOblivious(a, b, M, N, m/2, n/2, i+m/2, j);
+    transposeCacheOblivious(a, b, M, N, m/2, n/2, i+m/2, j+n/2);
+    
+//    transposeCacheOblivious(m, N, n/2, i, j);
+//    transposeCacheOblivious(m, N, n/2, i, j+n/2);
+//    transposeCacheOblivious(m, N, n/2, i+n/2, j);
+//    transposeCacheOblivious(m, N, n/2, i+n/2, j+n/2);
 }
 
 void swapTiles(int *a, int *b, int s, int n)
