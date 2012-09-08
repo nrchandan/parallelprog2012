@@ -23,16 +23,16 @@ int* allocateMatrix(int row, int column);
 int* generateMatrix(int row, int column);
 int* loadMatrix(char *infile, int row, int column);
 
-// matrix can be a sub-matrix (sxs) of another matrix (nxn).
+// matrix can be a sub-matrix (mxn) of another matrix (MxN).
 void transpose(int *matrix1, int *matrix2, int row_M, int column_N, int row_m, int column_n);
-// matrix can be a sub-matrix (nxn) of another matrix (NxN). Use tilesize s for the algorithm. 
-void transpose1Tiled(int *matrix, int dimension_N, int size_n, int tilesize_s);
-// two tiled transpose of matrix (nxn) with tile size as s1 and s2.
-void transpose2Tiled(int *matrix, int dimension_n, int tile1size_s1, int tile2size_s2);
 
-void transposeCacheOblivious(int *matrix, int length_N, int tilesize_n, int row_i, int column_j);
+void transpose1Tiled(int *matrix1, int *matrix2, int row_M, int column_N, int row_m, int column_n, int tilesize_s);
+
+void transpose2Tiled(int *matrix1, int *matrix2, int row_m, int column_n, int tile1size_s1, int tile2size_s2);
+
+//void transposeCacheOblivious(int *matrix, int length_N, int tilesize_n, int row_i, int column_j);
 // matrices can be sub-matrices 
-void swapTiles(int *matrix1, int *matrix2, int tilesize_s, int length_n);
+//void swapTiles(int *matrix1, int *matrix2, int tilesize_s, int length_n);
 
 void printm(int *matrix, int row, int column);
 void printmf(int *matrix, int row, int column, const char *filename);
@@ -67,7 +67,8 @@ int main(int argc, char *argv[])
 {
     int *a, *b;
     const char *usage = "Usage: transposeOP -(basic|1tiled|2tiled|cacheob) [[-i <infile>] -m <row> -n <column>] [-s1 tilesize] [-s2 tilesize] [-o <outfile>] \n";
-    char *infile=NULL, *outfile=NULL, mode='b';
+    char *infile=NULL, *outfile=NULL;
+    char mode='b'; //default mode is "-basic".
     int row=0, column=0, tile1size=0, tile2size=0;
     int i;
     
@@ -130,7 +131,7 @@ int main(int argc, char *argv[])
             if (tile1size == 0) {
                 tile1size = TILE1SIZE;
             }
-//            transpose1Tiled(m, dimension, dimension, tile1size);
+            transpose1Tiled(a, b, row, column, row, column, tile1size);
             break;
         case '2':
             if (tile2size == 0) {
@@ -186,40 +187,23 @@ int *A(int*m, int N, int i, int j)
 
 
 /**
- * (i1, j1) is the position of the nxn sub-matrix in an NxN matrix.
- * s is the tilesize.
- * It is important to have the right tile size for optimal performance.
- * Find this using (?)
  *
-void transpose1Tiled(int *m, int N, int n, int s)
+ */
+void transpose1Tiled(int *a, int *b, int M, int N, int m, int n, int s)
 {
     int i, j;
     
     if (n<=s) {
-        transpose(m, n, n);
+        transpose(a, b, M, N, m, n);
     } else {
-        for (i=0; i<n; i+=s) {
-            for (j=i; j<n; j+=s) {
-                //transpose 1st tile
-                //A(i, j)(i+s, j+s) is the 1st tile.
-                transpose(M(m,N,i,j), s, N);
-                if (i==j) {
-                    //only the above transpose needed since this is a diagonal tile.
-                    //only tiles above/below the diagonal need swapping and transposing.
-                    continue;
-                }
-                
-                //transpose 2nd tile
-                //A(j, i)(j+s, i+s) is the 2nd tile.
-                transpose(M(m,N,j,i), s, N);               
-
-                //swap the tiles
-                swapTiles(M(m,N,i,j), M(m,N,j,i), s, N);
+        for (i=0; i<m; i+=s) {
+            for (j=0; j<n; j+=s) {
+                transpose(A(a,N,i,j), A(b,M,j,i), M, N, s, s);
             }
         }    
     }
 }
-
+/*
 
 void transpose2Tiled(int *m, int n, int s1, int s2)
 {
@@ -331,8 +315,8 @@ int* generateMatrix(int row, int column)
     for (i=0; i<row; i++) {
         for (j=0; j<column; j++) {
 //            m[i][j] = rand()%10;
-            *A(m,column,i,j) = rand()%10;
-//            *A(m,column,i,j) = j%10;
+//            *A(m,column,i,j) = rand()%10;
+            *A(m,column,i,j) = j%10;
         }
     }
     return m;
