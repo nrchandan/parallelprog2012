@@ -11,7 +11,7 @@
  * Author: Chandan Kumar chandan.kumar@students.iiit.ac.in
  * Date: 2012-08-20
  *
- * Assignment 1.b of Parallel Programming course during 
+ * Assignment 1.2 of Parallel Programming course during 
  * Monsoon 2012 semester offered by Suresh Purini.
  * 
  * Out-of-place matrix transpose of dimension m x n.
@@ -24,7 +24,7 @@ int* generateMatrix(int row, int column);
 int* loadMatrix(char *infile, int row, int column);
 
 // matrix can be a sub-matrix (sxs) of another matrix (nxn).
-void transpose(int *matrix1, int *matrix2, int size_s, int row_m, int column_n);
+void transpose(int *matrix1, int *matrix2, int row_M, int column_N, int row_m, int column_n);
 // matrix can be a sub-matrix (nxn) of another matrix (NxN). Use tilesize s for the algorithm. 
 void transpose1Tiled(int *matrix, int dimension_N, int size_n, int tilesize_s);
 // two tiled transpose of matrix (nxn) with tile size as s1 and s2.
@@ -37,26 +37,26 @@ void swapTiles(int *matrix1, int *matrix2, int tilesize_s, int length_n);
 void printm(int *matrix, int row, int column);
 void printmf(int *matrix, int row, int column, const char *filename);
 
-int* M(int *matrix, int dimension, int i, int j);
+int *A(int *matrix, int dimension, int i, int j);
 
 /**
  * Sample arguments
  *
- * To transpose a randomly generated 64x64 matrix using basic algorithm 
+ * To transpose a randomly generated 64x32 matrix using basic algorithm 
  * (both input and output displayed on screen)
- *              ./transposeIP -basic -n64
+ *              ./transposeOP -basic -m 64 -n 32
  *
- * To transpose a randomly generated 128x128 matrix using 1tiled algorithm 
+ * To transpose a randomly generated 128x64 matrix using 1tiled algorithm 
  * with tile size 16
- *              ./transposeIP -1tiled -n 128 -s1 16
+ *              ./transposeOP -1tiled -m 128 -n 64 -s1 16
  *
- * To transpose a randomly generated 128x128 matrix using 2tiled algorithm
+ * To transpose a randomly generated 128x64 matrix using 2tiled algorithm
  * with level 1 tile size 16 and level 2 tile size 4
- *              ./transposeIP -2tiled -n 128 -s1 16 -s2 4
+ *              ./transposeOP -2tiled -m 128 -n 64 -s1 16 -s2 4
  *
- * To transpose a 4096x4096 matrix using cache oblivious algorithm with input 
+ * To transpose a 4096x1024 matrix using cache oblivious algorithm with input 
  * file infile.txt and directing output to outfile.txt
- *              ./transposeIP -cacheob -i infile.txt -n 4096 -o outfile.txt
+ *              ./transposeOP -cacheob -i infile.txt -m 4096 -n 1024 -o outfile.txt
  *
  * Future work: 
  * - main() is too big.  Move argument handling to a separate function.
@@ -65,10 +65,10 @@ int* M(int *matrix, int dimension, int i, int j);
  */
 int main(int argc, char *argv[])
 {
-    int* m;
-    const char *usage = "Usage: transposeIP -(basic|1tiled|2tiled|cacheob) [[-i <infile>] -n <dimension>] [-s1 tilesize] [-s2 tilesize] [-o <outfile>] \n";
+    int *a, *b;
+    const char *usage = "Usage: transposeOP -(basic|1tiled|2tiled|cacheob) [[-i <infile>] -m <row> -n <column>] [-s1 tilesize] [-s2 tilesize] [-o <outfile>] \n";
     char *infile=NULL, *outfile=NULL, mode='b';
-    int dimension=0, tile1size=0, tile2size=0;
+    int row=0, column=0, tile1size=0, tile2size=0;
     int i;
     
     
@@ -83,8 +83,10 @@ int main(int argc, char *argv[])
             infile = argv[++i];
         } else if (!strcmp("-o", argv[i])) {
             outfile = argv[++i];
+        } else if (!strcmp("-m", argv[i])) {
+            sscanf(argv[++i], "%d", &row);
         } else if (!strcmp("-n", argv[i])) {
-            sscanf(argv[++i], "%d", &dimension);
+            sscanf(argv[++i], "%d", &column);
         } else if (!strcmp("-s1", argv[i])) {
             sscanf(argv[++i], "%d", &tile1size);
         } else if (!strcmp("-s2", argv[i])) {
@@ -99,40 +101,45 @@ int main(int argc, char *argv[])
     
     if (infile == NULL) {
         // no input file provided
-        if (dimension==0) {
-            dimension = LENGTH;
+        if (row==0) {
+            row=ROW;
         }
-        m = generateMatrix(dimension);
+        if (column==0) {
+            column=COLUMN;
+        }
+        a = generateMatrix(row, column);
+
     } else {
-        if (dimension<=0) {
+        if (row<=0 || column<=0) {
             printf("Please provide a valid dimension of the input matrix.\n");
             printf("%s", usage);
             exit(0);
         }
-        m = loadMatrix(infile, dimension);
+        a = loadMatrix(infile, row, column);
     }
-
+    b = allocateMatrix(column, row);
+    
     printf("\nBefore Transpose: \n");
-    printm(m, dimension);
+    printm(a, row, column);
     
     switch (mode) {
         case 'b':
-            transpose(m, dimension, dimension);
+            transpose(a, b, row, column, row, column);
             break;
         case '1':
             if (tile1size == 0) {
                 tile1size = TILE1SIZE;
             }
-            transpose1Tiled(m, dimension, dimension, tile1size);
+//            transpose1Tiled(m, dimension, dimension, tile1size);
             break;
         case '2':
             if (tile2size == 0) {
                 tile2size = TILE2SIZE;
             }
-            transpose2Tiled(m, dimension, tile1size, tile2size);
+//            transpose2Tiled(m, dimension, tile1size, tile2size);
             break;
         case 'c':
-            transposeCacheOblivious(m, dimension, dimension, 0, 0);
+//            transposeCacheOblivious(m, dimension, dimension, 0, 0);
             break;
         default:
             printf("Option not recognized or not implemented\n");
@@ -142,44 +149,48 @@ int main(int argc, char *argv[])
     
     printf("\nAfter Transpose: \n");
     if (outfile==NULL) {
-        printm(m, dimension);
+        printm(b, column, row);
     } else {
-        printmf(m, dimension, outfile);
+        printmf(b, column, row, outfile);
     }
     
-    free(m);
+    free(a);
+    free(b);
     return 1;
 }
 
 /**
- * m is sub-matrix (length s) of another matrix (length n).
+ * Transpose matrix a and place it into b.
+ * a and b can be sub-matrices (mxn, nxm) of another matrix (MxN, NxM).
  * For basic transpose, s equals n.
  *
  */
-void transpose(int *a, int *b, int s, int m, int n) 
+void transpose(int *a, int *b, int M, int N, int m, int n) 
 {
     int i, j;
     
-    for (i=0; i<s; i++) {
-        for (j=i+1; j<s; j++) {
-            *M(a,n,i,j)=*M(m,n,j,i);
-        } 
+    for (i=0; i<m; i++) {
+        for (j=0; j<n; j++) {
+            *A(b,M,j,i)=*A(a,N,i,j);
+        }
     }
 }
 
 
-int* M(int*m, int N, int i, int j)
+int *A(int*m, int N, int i, int j)
 {
 //    printf("cell number is %d ", i*N+j);
     return m+i*N+j;
 }
+
+
 
 /**
  * (i1, j1) is the position of the nxn sub-matrix in an NxN matrix.
  * s is the tilesize.
  * It is important to have the right tile size for optimal performance.
  * Find this using (?)
- */
+ *
 void transpose1Tiled(int *m, int N, int n, int s)
 {
     int i, j;
@@ -245,11 +256,11 @@ void transposeCacheOblivious(int *m, int N, int n, int i, int j)
 //    printf("N= %d, n=%d, i=%d, j=%d\n", N, n, i, j);
     if (n==2) {
         //base case: if matrix size is 2x2, swap m(0,1) with m(1,0)
-//        printf("Swapping %d, %d\n", *M(m,N,i,j+1), *M(m,N,i+1,j));
+//        printf("Swapping %d, %d\n", *A(m,N,i,j+1), *A(m,N,i+1,j));
 //        printf("at cell number %d and %d\n", N*i+j+1, N*(i+1)+j);
-        temp = *M(m,N,i,j+1);
-        *M(m,N,i,j+1) = *M(m,N,i+1,j);
-        *M(m,N,i+1,j) = temp;
+        temp = *A(m,N,i,j+1);
+        *A(m,N,i,j+1) = *A(m,N,i+1,j);
+        *A(m,N,i+1,j) = temp;
         return;        
     }
     transposeCacheOblivious(m, N, n/2, i, j);
@@ -264,27 +275,28 @@ void swapTiles(int *a, int *b, int s, int n)
     int i, j, temp;
     for (i=0; i<s; i++) {
         for (j=0; j<s; j++) {
-            temp=*M(a,n,i,j);
-            *M(a,n,i,j)=*M(b,n,i,j);
-            *M(b,n,i,j)=temp;
+            temp=*A(a,n,i,j);
+            *A(a,n,i,j)=*A(b,n,i,j);
+            *A(b,n,i,j)=temp;
 //            temp=a[i][j];
 //            a[i][j]=b[i][j];
 //            b[i][j]=temp;
         }
     }
 }
-
+*/
+ 
 /**
  * Print matrix in stdout.
  *
  */
-void printm(int *m, int n)
+void printm(int *a, int m, int n)
 {
     int i, j;
-    for (i=0; i<n; i++) {
+    for (i=0; i<m; i++) {
         for (j=0; j<n; j++) {
 //            printf("%d ", m[i][j]);
-            printf("%d ", *M(m,n,i,j));
+            printf("%d ", *A(a,n,i,j));
         }
         printf("\n");
     }
@@ -294,7 +306,7 @@ void printm(int *m, int n)
  * Print matrix in the specified file.
  *
  */
-void printmf(int *m, int n, const char *filename)
+void printmf(int *a, int m, int n, const char *filename)
 {
     int i, j;
     
@@ -303,10 +315,9 @@ void printmf(int *m, int n, const char *filename)
         printf("Error opening %s for writing\n", filename);
     }
     
-    for (i=0; i<n; i++) {
+    for (i=0; i<m; i++) {
         for (j=0; j<n; j++) {
-//            fprintf(fp, "%d ", m[i][j]);
-            fprintf(fp, "%d ", *M(m,n,i,j));
+            fprintf(fp, "%d ", *A(a,n,i,j));
         }
         fprintf(fp, "\n");
     }
@@ -320,7 +331,8 @@ int* generateMatrix(int row, int column)
     for (i=0; i<row; i++) {
         for (j=0; j<column; j++) {
 //            m[i][j] = rand()%10;
-            *M(m,row,i,j) = rand()%10;
+            *A(m,column,i,j) = rand()%10;
+//            *A(m,column,i,j) = j%10;
         }
     }
     return m;
@@ -341,7 +353,7 @@ int* loadMatrix(char *filename, int row, int column)
     for (i=0; i<row; i++) {
         for (j=0; j<column; j++) {
 //            fscanf(fp, "%d", &m[i][j]);
-            fscanf(fp, "%d", M(m,row,i,j));
+            fscanf(fp, "%d", A(m,row,i,j));
         }
     }
     return m;
