@@ -132,6 +132,9 @@ int main(int argc, char *argv[])
             transpose1Tiled(m, dimension, dimension, tile1size);
             break;
         case '2':
+            if (tile1size == 0) {
+                tile1size = TILE1SIZE;
+            }
             if (tile2size == 0) {
                 tile2size = TILE2SIZE;
             }
