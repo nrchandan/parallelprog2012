@@ -144,7 +144,7 @@ int main(int argc, char *argv[])
             transpose2Tiled(a, b, row, column, tile1size, tile2size);
             break;
         case 'c':
-//            transposeCacheOblivious(a, b, row, column, row, column, 0, 0);
+            transposeCacheOblivious(a, b, row, column, row, column, 0, 0);
             break;
         default:
             printf("Option not recognized or not implemented\n");
@@ -228,7 +228,7 @@ void transpose2Tiled(int *a, int *b, int m, int n, int s1, int s2)
         }
     }
 }
-/*
+
 
 void transposeCacheOblivious(int *a, int *b, int M, int N, int m, int n, int i, int j)
 {   
@@ -255,6 +255,7 @@ void transposeCacheOblivious(int *a, int *b, int M, int N, int m, int n, int i, 
 //    transposeCacheOblivious(m, N, n/2, i+n/2, j+n/2);
 }
 
+/*
 void swapTiles(int *a, int *b, int s, int n)
 {
     int i, j, temp;
