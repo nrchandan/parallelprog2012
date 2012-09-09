@@ -8,11 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		17745C0615F26CFE00C37CA2 /* transposeOP.c in Sources */ = {isa = PBXBuildFile; fileRef = 17745C0515F26CFE00C37CA2 /* transposeOP.c */; };
+		17CCE7C915FC6A810037B409 /* prefixSum.c in Sources */ = {isa = PBXBuildFile; fileRef = 17CCE7C815FC6A810037B409 /* prefixSum.c */; };
 		17EE904A15ECAAD900D995CF /* transposeIP.c in Sources */ = {isa = PBXBuildFile; fileRef = 17EE904915ECAAD900D995CF /* transposeIP.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		17745C0515F26CFE00C37CA2 /* transposeOP.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = transposeOP.c; sourceTree = "<group>"; };
+		17CCE7C815FC6A810037B409 /* prefixSum.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = prefixSum.c; sourceTree = "<group>"; };
 		17EE903A15EA869300D995CF /* libtranspose.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libtranspose.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		17EE904915ECAAD900D995CF /* transposeIP.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = transposeIP.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -31,6 +33,7 @@
 		17EE902F15EA869200D995CF = {
 			isa = PBXGroup;
 			children = (
+				17CCE7C815FC6A810037B409 /* prefixSum.c */,
 				17EE904915ECAAD900D995CF /* transposeIP.c */,
 				17745C0515F26CFE00C37CA2 /* transposeOP.c */,
 				17EE903B15EA869300D995CF /* Products */,
@@ -107,6 +110,7 @@
 			files = (
 				17EE904A15ECAAD900D995CF /* transposeIP.c in Sources */,
 				17745C0615F26CFE00C37CA2 /* transposeOP.c in Sources */,
+				17CCE7C915FC6A810037B409 /* prefixSum.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
