@@ -1,3 +1,15 @@
+/*
+ * Author: Chandan Kumar chandan.kumar@students.iiit.ac.in
+ * Date: 2012-08-20
+ *
+ * Assignment 1.2 of Parallel Programming course during 
+ * Monsoon 2012 semester offered by Suresh Purini.
+ * 
+ * Out-of-place matrix transpose of dimension m x n.
+ * Input dimensions m and n assumed to be power of 2.
+ *
+ */
+
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
@@ -7,17 +19,6 @@
 #define TILE1SIZE 16
 #define TILE2SIZE 4
 
-/*
- * Author: Chandan Kumar chandan.kumar@students.iiit.ac.in
- * Date: 2012-08-20
- *
- * Assignment 1.2 of Parallel Programming course during 
- * Monsoon 2012 semester offered by Suresh Purini.
- * 
- * Out-of-place matrix transpose of dimension m x n.
- * Input size assumed to be power of 2. 
- *
- */
 
 int* allocateMatrix(int row, int column);
 int* generateMatrix(int row, int column);
@@ -67,11 +68,11 @@ int *A(int *matrix, int dimension, int i, int j);
 int main(int argc, char *argv[])
 {
     int *a, *b;
-    const char *usage = "Usage: transposeOP -(basic|1tiled|2tiled|cacheob) [[-i <infile>] -m <row> -n <column>] [-s1 tilesize] [-s2 tilesize] [-o <outfile>] \n";
+    const char *usage = "Usage: transposeOP -(basic|1tiled|2tiled|cacheob) [[-i <infile>] -m <row> -n <column>] [-s1 tilesize] [-s2 tilesize] [-o <outfile>] [-noIO]\n";
     char *infile=NULL, *outfile=NULL;
     char mode='b'; //default mode is "-basic".
     int row=0, column=0, tile1size=0, tile2size=0;
-    int i;
+    int i, noio=0;
     
     
     if (argc <=1 ) {
@@ -98,6 +99,8 @@ int main(int argc, char *argv[])
                    !strcmp("-2tiled", argv[i])  ||
                    !strcmp("-cacheob", argv[i])) {
             mode=argv[i][1]; //mode = 'b', '1', '2' or 'c'
+        } else if (!strcmp("-noIO", argv[i]) || !strcmp("-noio", argv[i])) {
+            noio=1;
         }
     }
     
@@ -121,8 +124,12 @@ int main(int argc, char *argv[])
     }
     b = allocateMatrix(column, row);
     
-    printf("\nBefore Transpose: \n");
-    printm(a, row, column);
+    if (!noio) {
+        printf("\nBefore Transpose: \n");
+        printm(a, row, column);
+    }
+    
+    printf("Starting transpose...\n");
     
     switch (mode) {
         case 'b':
@@ -154,12 +161,14 @@ int main(int argc, char *argv[])
             printf("%s", usage);
             exit(0);
     }
-    
-    printf("\nAfter Transpose: \n");
-    if (outfile==NULL) {
-        printm(b, column, row);
-    } else {
-        printmf(b, column, row, outfile);
+    printf("Transpose complete.\n");
+    if (!noio) {
+        printf("\nAfter Transpose: \n");
+        if (outfile==NULL) {
+            printm(b, column, row);
+        } else {
+            printmf(b, column, row, outfile);
+        }
     }
     
     free(a);

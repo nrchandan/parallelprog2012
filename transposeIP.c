@@ -1,12 +1,3 @@
-#include<stdio.h>
-#include<stdlib.h>
-#include<string.h>
-#include<Accelerate/Accelerate.h>
-
-#define LENGTH 64
-#define TILE1SIZE 16
-#define TILE2SIZE 4
-
 /*
  * Author: Chandan Kumar chandan.kumar@students.iiit.ac.in
  * Date: 2012-08-20
@@ -19,6 +10,16 @@
  * Matrix assumed to be square i.e n x n.
  *
  */
+
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+#include<Accelerate/Accelerate.h>
+
+#define LENGTH 64
+#define TILE1SIZE 16
+#define TILE2SIZE 4
+
 
 int* allocateMatrix(int length);
 int* generateMatrix(int length);
@@ -72,10 +73,10 @@ int* M(int *matrix, int dimension, int i, int j);
 int main(int argc, char *argv[])
 {
     int* m;
-    const char *usage = "Usage: transposeIP -(basic|1tiled|2tiled|cacheob) [[-i <infile>] -n <dimension>] [-s1 tilesize] [-s2 tilesize] [-o <outfile>] \n";
+    const char *usage = "Usage: transposeIP -(basic|1tiled|2tiled|cacheob) [[-i <infile>] -n <dimension>] [-s1 tilesize] [-s2 tilesize] [-o <outfile>] [-noIO]\n";
     char *infile=NULL, *outfile=NULL, mode='b';
     int dimension=0, tile1size=0, tile2size=0;
-    int i;
+    int i, noio=0;
     
     
     if (argc <=1 ) {
@@ -100,6 +101,8 @@ int main(int argc, char *argv[])
                    !strcmp("-2tiled", argv[i])  ||
                    !strcmp("-cacheob", argv[i])) {
             mode=argv[i][1]; //mode = 'b', '1', '2' or 'c'
+        } else if (!strcmp("-noIO", argv[i]) || !strcmp("-noio", argv[i])) {
+            noio=1;
         }
     }
     
@@ -118,8 +121,12 @@ int main(int argc, char *argv[])
         m = loadMatrix(infile, dimension);
     }
 
-    printf("\nBefore Transpose: \n");
-    printm(m, dimension);
+    if (!noio) {
+        printf("\nBefore Transpose: \n");
+        printm(m, dimension);
+    }
+    
+    printf("Starting transpose...\n");
     
     switch (mode) {
         case 'b':
@@ -148,14 +155,15 @@ int main(int argc, char *argv[])
             printf("%s", usage);
             exit(0);
     }
-    
-    printf("\nAfter Transpose: \n");
-    if (outfile==NULL) {
-        printm(m, dimension);
-    } else {
-        printmf(m, dimension, outfile);
+    printf("Transpose complete.\n");
+    if (!noio) {
+        printf("\nAfter Transpose: \n");
+        if (outfile==NULL) {
+            printm(m, dimension);
+        } else {
+            printmf(m, dimension, outfile);
+        }
     }
-    
     free(m);
     return 1;
 }
