@@ -31,7 +31,7 @@ void transpose1Tiled(int *matrix1, int *matrix2, int row_M, int column_N, int ro
 void transpose2Tiled(int *matrix1, int *matrix2, int row_m, int column_n, int tile1size_s1, int tile2size_s2);
 
 // row_M and column N are needed in order to determine correct i and j.
-void transposeCacheOblivious(int *matrix1, int *matrix2, int row_M, int column_N, int row_m, int column_n, int position_i, int position_j);
+void transposeCacheOblivious(int *matrix1, int *matrix2, int row_M, int column_N, int row_m, int column_n, int position_i, int position_j, int tilesize_s);
 // matrices can be sub-matrices 
 //void swapTiles(int *matrix1, int *matrix2, int tilesize_s, int length_n);
 
@@ -144,7 +144,10 @@ int main(int argc, char *argv[])
             transpose2Tiled(a, b, row, column, tile1size, tile2size);
             break;
         case 'c':
-            transposeCacheOblivious(a, b, row, column, row, column, 0, 0);
+            if (tile1size == 0) {
+                tile1size = TILE1SIZE;
+            }
+            transposeCacheOblivious(a, b, row, column, row, column, 0, 0, tile1size);
             break;
         default:
             printf("Option not recognized or not implemented\n");
@@ -230,47 +233,23 @@ void transpose2Tiled(int *a, int *b, int m, int n, int s1, int s2)
 }
 
 
-void transposeCacheOblivious(int *a, int *b, int M, int N, int m, int n, int i, int j)
+void transposeCacheOblivious(int *a, int *b, int M, int N, int m, int n, int i, int j, int s)
 {   
-//    printf("N= %d, n=%d, i=%d, j=%d\n", N, n, i, j);
-    if (n==2) {
-        //base case: if matrix size is 2x2, swap m(0,1) with m(1,0)
-//        printf("Swapping %d, %d\n", *A(m,N,i,j+1), *A(m,N,i+1,j));
-//        printf("at cell number %d and %d\n", N*i+j+1, N*(i+1)+j);
-//        temp = *A(m,N,i,j+1);
-//        *A(m,N,i,j+1) = *A(m,N,i+1,j);
-//        *A(m,N,i+1,j) = temp;
-        transpose(a, b, M, N, m, n);
-        
-        return;        
+    if (m>s) {
+        // if row dimension is bigger than the tilesize, break up the matrix into two sub-matrices.
+        transposeCacheOblivious(A(a,N,i,j), A(b,M,j,i), M, N, m/2, n, i, j, s);
+        transposeCacheOblivious(A(a,N,i+m/2,j), A(b,M,j,i+m/2), M, N, m/2, n, i+m/2, j, s);
     }
-    transposeCacheOblivious(a, b, M, N, m/2, n/2, i, j);
-    transposeCacheOblivious(a, b, M, N, m/2, n/2, i, j+n/2);
-    transposeCacheOblivious(a, b, M, N, m/2, n/2, i+m/2, j);
-    transposeCacheOblivious(a, b, M, N, m/2, n/2, i+m/2, j+n/2);
-    
-//    transposeCacheOblivious(m, N, n/2, i, j);
-//    transposeCacheOblivious(m, N, n/2, i, j+n/2);
-//    transposeCacheOblivious(m, N, n/2, i+n/2, j);
-//    transposeCacheOblivious(m, N, n/2, i+n/2, j+n/2);
+    if (n>s) {
+        // if column dimension is bigger than the tilesize, break up the matrix into two sub-matrices.
+        transposeCacheOblivious(A(a,N,i,j), A(b,M,j,i), M, N, m, n/2, i, j, s);
+        transposeCacheOblivious(A(a,N,i,j+n/2), A(b,M,j+n/2,i), M, N, m, n/2, i, j+n/2, s);
+    } else {
+        transpose(a, b, M, N, m, n);
+        return;
+    }
 }
 
-/*
-void swapTiles(int *a, int *b, int s, int n)
-{
-    int i, j, temp;
-    for (i=0; i<s; i++) {
-        for (j=0; j<s; j++) {
-            temp=*A(a,n,i,j);
-            *A(a,n,i,j)=*A(b,n,i,j);
-            *A(b,n,i,j)=temp;
-//            temp=a[i][j];
-//            a[i][j]=b[i][j];
-//            b[i][j]=temp;
-        }
-    }
-}
-*/
  
 /**
  * Print matrix in stdout.
