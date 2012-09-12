@@ -5,8 +5,11 @@ if [[ "$1" = "" ]] ; then
 	exit
 fi
 
-perf stat -r 5 -e cycles -e instructions -e cache-references -e cache-misses -e L1-dcache-loads -e L1-dcache-loads-misses -o temp_$1.txt ./ipTranspose -basic -n $1 -noio > /dev/null
-tail -11 temp_$1.txt > one_caller_temp1.txt
+C1="perf stat -r 5 -e cycles -e instructions -e cache-references -e cache-misses -e L1-dcache-loads -e L1-dcache-loads-misses -o temp_one_caller.txt $1"
+$C1
+
+tail -11 temp_one_caller.txt > one_caller_temp1.txt
+#rm -f temp_one_caller.txt
 
 #echo "Command run was : " $(head -1 one_caller_temp1.txt)
 #echo "Cycles are : " $(cat one_caller_temp1.txt | grep -o '[0-9,]* cycles' | grep -o '[0-9,]*') 
@@ -34,4 +37,4 @@ TOTALSECONDS=$(cat one_caller_temp1.txt | grep -o '[\.0-9,]* seconds time elapse
 
 echo $COMMAND"|"$CYCLES"|"$INS"|"$INSPC"|"$CACHEREF"|"$CACHEMISS"|"$CACHEREFPCNT"|"$L1CACHELOAD"|"$L1CACHEMISS"|"$L1CACHEREFPCNT"|"$TOTALSECONDS
 
-rm -f one_caller_temp1.txt
+#rm -f one_caller_temp1.txt
