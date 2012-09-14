@@ -21,7 +21,7 @@
 
 
 int* allocateMatrix(int length);
-int* generateMatrix(int length);
+int* generateMatrix(int length, int noinit);
 int* loadMatrix(char *infile, int length);
 
 // matrix can be a sub-matrix (sxs) of another matrix (nxn).
@@ -72,10 +72,10 @@ int* M(int *matrix, int dimension, int i, int j);
 int main(int argc, char *argv[])
 {
     int* m;
-    const char *usage = "Usage: transposeIP -(basic|1tiled|2tiled|cacheob) [[-i <infile>] -n <dimension>] [-s1 tilesize] [-s2 tilesize] [-o <outfile>] [-noIO]\n";
+    const char *usage = "Usage: transposeIP -(basic|1tiled|2tiled|cacheob) [[-i <infile>] -n <dimension>] [-s1 tilesize] [-s2 tilesize] [-o <outfile>] [-noIO] [-noinit]\n";
     char *infile=NULL, *outfile=NULL, mode='b';
     int dimension=0, tile1size=0, tile2size=0;
-    int i, noio=0;
+    int i, noio=0, noinit=0;
     
     
     if (argc <=1 ) {
@@ -102,6 +102,8 @@ int main(int argc, char *argv[])
             mode=argv[i][1]; //mode = 'b', '1', '2' or 'c'
         } else if (!strcmp("-noIO", argv[i]) || !strcmp("-noio", argv[i])) {
             noio=1;
+        } else if (!strcmp("-noinit", argv[i])) {
+            noinit=1;
         }
     }
     
@@ -110,7 +112,7 @@ int main(int argc, char *argv[])
         if (dimension==0) {
             dimension = LENGTH;
         }
-        m = generateMatrix(dimension);
+        m = generateMatrix(dimension, noinit);
     } else {
         if (dimension<=0) {
             printf("Please provide a valid dimension of the input matrix.\n");
@@ -335,19 +337,21 @@ void printmf(int *m, int n, const char *filename)
     }
 }
 
-int* generateMatrix(int n)
+int* generateMatrix(int n, int noinit)
 {
     int i, j, *m;
     m = allocateMatrix(n);
     printf("Generating matrix...\n");
-    for (i=0; i<n; i++) {
-        for (j=0; j<n; j++) {
-//            m[i][j] = rand()%10;
-//            *M(m,n,i,j) = rand()%10;
-            // Modulo 10 so that each number is only 1 digit -
-            // easy for displaying larger matrices on screen.
-            *M(m,n,i,j) = j%10;
-//            *(m+i*N+j)= rand()%10;
+    if (!noinit) {
+        for (i=0; i<n; i++) {
+            for (j=0; j<n; j++) {
+                //            m[i][j] = rand()%10;
+                //            *M(m,n,i,j) = rand()%10;
+                // Modulo 10 so that each number is only 1 digit -
+                // easy for displaying larger matrices on screen.
+                *M(m,n,i,j) = j%10;
+                //            *(m+i*N+j)= rand()%10;
+            }
         }
     }
     return m;
