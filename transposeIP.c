@@ -341,8 +341,9 @@ int* generateMatrix(int n, int noinit)
 {
     int i, j, *m;
     m = allocateMatrix(n);
-    printf("Generating matrix...\n");
+
     if (!noinit) {
+        printf("Generating matrix...\n");
         for (i=0; i<n; i++) {
             for (j=0; j<n; j++) {
                 //            m[i][j] = rand()%10;

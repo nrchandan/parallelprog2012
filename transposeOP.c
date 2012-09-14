@@ -21,7 +21,7 @@
 
 
 int* allocateMatrix(int row, int column);
-int* generateMatrix(int row, int column);
+int* generateMatrix(int row, int column, int noinit);
 int* loadMatrix(char *infile, int row, int column);
 
 // matrix can be a sub-matrix (mxn) of another matrix (MxN).
@@ -68,11 +68,11 @@ int *A(int *matrix, int dimension, int i, int j);
 int main(int argc, char *argv[])
 {
     int *a, *b;
-    const char *usage = "Usage: transposeOP -(basic|1tiled|2tiled|cacheob) [[-i <infile>] -m <row> -n <column>] [-s1 tilesize] [-s2 tilesize] [-o <outfile>] [-noIO]\n";
+    const char *usage = "Usage: transposeOP -(basic|1tiled|2tiled|cacheob) [[-i <infile>] -m <row> -n <column>] [-s1 tilesize] [-s2 tilesize] [-o <outfile>] [-noIO] [-noinit]\n";
     char *infile=NULL, *outfile=NULL;
     char mode='b'; //default mode is "-basic".
     int row=0, column=0, tile1size=0, tile2size=0;
-    int i, noio=0;
+    int i, noio=0, noinit=0;;
     
     
     if (argc <=1 ) {
@@ -101,6 +101,8 @@ int main(int argc, char *argv[])
             mode=argv[i][1]; //mode = 'b', '1', '2' or 'c'
         } else if (!strcmp("-noIO", argv[i]) || !strcmp("-noio", argv[i])) {
             noio=1;
+        } else if (!strcmp("-noinit", argv[i])) {
+            noinit=1;
         }
     }
     
@@ -112,7 +114,7 @@ int main(int argc, char *argv[])
         if (column==0) {
             column=COLUMN;
         }
-        a = generateMatrix(row, column);
+        a = generateMatrix(row, column, noinit);
 
     } else {
         if (row<=0 || column<=0) {
@@ -297,16 +299,18 @@ void printmf(int *a, int m, int n, const char *filename)
     }
 }
 
-int* generateMatrix(int row, int column)
+int* generateMatrix(int row, int column, int noinit)
 {
     int i, j, *m;
     m = allocateMatrix(row, column);
-    printf("Generating matrix...\n");
-    for (i=0; i<row; i++) {
-        for (j=0; j<column; j++) {
-//            m[i][j] = rand()%10;
-//            *A(m,column,i,j) = rand()%10;
-            *A(m,column,i,j) = j%10;
+    if (!noinit) {
+        printf("Generating matrix...\n");
+        for (i=0; i<row; i++) {
+            for (j=0; j<column; j++) {
+                //            m[i][j] = rand()%10;
+                //            *A(m,column,i,j) = rand()%10;
+                *A(m,column,i,j) = j%10;
+            }
         }
     }
     return m;
