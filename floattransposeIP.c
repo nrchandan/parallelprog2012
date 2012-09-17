@@ -9,6 +9,9 @@
  * Input size assumed to be power of 2. 
  * Matrix assumed to be square i.e n x n.
  *
+ * Compile command:
+ * icc transposeIP.c -lmkl_core -lmkl_intel_lp64 -lmkl_sequential
+ *
  */
 
 #include<stdio.h>
@@ -28,7 +31,7 @@ float* loadMatrix(char *infile, int length);
 // matrix can be a sub-matrix (sxs) of another matrix (nxn).
 void transpose(float *matrix, int size_s, int dimension_n);
 
-// placeholder for BLAS optimized transpose.
+// Intel MKL BLAS optimized transpose.
 void transposeBLAS(float *matrix, int dimension_n);
 
 // matrix can be a sub-matrix (nxn) of another matrix (NxN). Use tilesize s for the algorithm. 
@@ -201,6 +204,16 @@ float* M(float*m, int N, int i, int j)
 
 void transposeBLAS(float *m, int n)
 {
+    /*
+     From mkl_trans.h:
+     void MKL_Simatcopy(
+     const char ordering, const char trans,
+     size_t rows, size_t cols,
+     const float alpha,
+     float * AB, size_t lda, size_t ldb);
+     
+     Description of parameters at http://software.intel.com/sites/products/documentation/hpc/composerxe/en-us/2011Update/mklxe/mkl_manual_win_mac/index.htm#bla/functn_mkl_imatcopy.htm
+     */
     MKL_Simatcopy ('R', 'T', n, n, 1, m, n, n);
 }
 
