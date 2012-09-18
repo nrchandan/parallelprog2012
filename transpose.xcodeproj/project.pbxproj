@@ -24,12 +24,7 @@
 		17CE0054160490ED001C9438 /* basictransposeOP.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = basictransposeOP.c; sourceTree = "<group>"; };
 		17CE00561606E8D9001C9438 /* floattransposeIP.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = floattransposeIP.c; sourceTree = "<group>"; };
 		17CE00581606E8FA001C9438 /* floattransposeOP.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = floattransposeOP.c; sourceTree = "<group>"; };
-		17CE005A1608478E001C9438 /* one_caller.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = one_caller.sh; sourceTree = "<group>"; };
-		17CE005B16084827001C9438 /* floatipbatch_caller.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = floatipbatch_caller.sh; sourceTree = "<group>"; };
-		17CE005C16084827001C9438 /* floatopbatch_caller.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = floatopbatch_caller.sh; sourceTree = "<group>"; };
-		17CE005D1608488B001C9438 /* prefixbatch_caller.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = prefixbatch_caller.sh; sourceTree = "<group>"; };
 		17CE005F160848D6001C9438 /* prefixSumCilk.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = prefixSumCilk.c; sourceTree = "<group>"; };
-		17CE00611608493C001C9438 /* opbasic_batch_caller.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = opbasic_batch_caller.sh; sourceTree = "<group>"; };
 		17CE006316084A8F001C9438 /* better_output.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = better_output.txt; sourceTree = "<group>"; };
 		17CE006416084A8F001C9438 /* better_output32768.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = better_output32768.txt; sourceTree = "<group>"; };
 		17CE006516084A8F001C9438 /* better_outputOn.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = better_outputOn.txt; sourceTree = "<group>"; };
@@ -45,6 +40,11 @@
 		17CE006F16084A8F001C9438 /* prefixbatch_caller1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = prefixbatch_caller1.txt; sourceTree = "<group>"; };
 		17CE007016084A8F001C9438 /* stats_iptranspose.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = stats_iptranspose.txt; sourceTree = "<group>"; };
 		17CE007116084A8F001C9438 /* stats_prefixSum.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = stats_prefixSum.txt; sourceTree = "<group>"; };
+		17CE007216084C3E001C9438 /* floatipbatch_caller.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = floatipbatch_caller.sh; path = "shell scripts/floatipbatch_caller.sh"; sourceTree = "<group>"; };
+		17CE007316084C3E001C9438 /* floatopbatch_caller.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = floatopbatch_caller.sh; path = "shell scripts/floatopbatch_caller.sh"; sourceTree = "<group>"; };
+		17CE007416084C3E001C9438 /* one_caller.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = one_caller.sh; path = "shell scripts/one_caller.sh"; sourceTree = "<group>"; };
+		17CE007516084C3E001C9438 /* opbasic_batch_caller.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = opbasic_batch_caller.sh; path = "shell scripts/opbasic_batch_caller.sh"; sourceTree = "<group>"; };
+		17CE007616084C3E001C9438 /* prefixbatch_caller.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = prefixbatch_caller.sh; path = "shell scripts/prefixbatch_caller.sh"; sourceTree = "<group>"; };
 		17EE903A15EA869300D995CF /* libtranspose.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libtranspose.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		17EE904915ECAAD900D995CF /* transposeIP.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = transposeIP.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -63,11 +63,11 @@
 		17CE005E1608489F001C9438 /* Shell Scripts */ = {
 			isa = PBXGroup;
 			children = (
-				17CE00611608493C001C9438 /* opbasic_batch_caller.sh */,
-				17CE005A1608478E001C9438 /* one_caller.sh */,
-				17CE005B16084827001C9438 /* floatipbatch_caller.sh */,
-				17CE005C16084827001C9438 /* floatopbatch_caller.sh */,
-				17CE005D1608488B001C9438 /* prefixbatch_caller.sh */,
+				17CE007216084C3E001C9438 /* floatipbatch_caller.sh */,
+				17CE007316084C3E001C9438 /* floatopbatch_caller.sh */,
+				17CE007416084C3E001C9438 /* one_caller.sh */,
+				17CE007516084C3E001C9438 /* opbasic_batch_caller.sh */,
+				17CE007616084C3E001C9438 /* prefixbatch_caller.sh */,
 			);
 			name = "Shell Scripts";
 			sourceTree = "<group>";
