@@ -120,6 +120,28 @@ void downSweep(int *list, int begin, int end, int carry)
 }
 
 
+
+/*
+ int iterativeUpSweep(int *list, int begin, int end)
+ {
+ // sample begin 0, end 7
+ // sample begin 8, end 15
+ int i, j, temp=0;
+ printf("begin=%d, end=%d\n", begin, end);
+ for (i=begin+1; i<end; i+=2) {
+ //i is always odd.
+ for (j=begin+1; j<i; j+=2) {
+ //sum all the odd positions
+ printf("i=%d, j=%d\n", i, j);
+ temp+=list[j];
+ }
+ list[end]=list[end-1]+temp;
+ }
+ return list[end];
+ }
+ */
+
+
 int *generateList(int n)
 {
     int *list, i;
