@@ -13,6 +13,7 @@
 		17CE0055160490ED001C9438 /* basictransposeOP.c in Sources */ = {isa = PBXBuildFile; fileRef = 17CE0054160490ED001C9438 /* basictransposeOP.c */; };
 		17CE00571606E8D9001C9438 /* floattransposeIP.c in Sources */ = {isa = PBXBuildFile; fileRef = 17CE00561606E8D9001C9438 /* floattransposeIP.c */; };
 		17CE00591606E8FA001C9438 /* floattransposeOP.c in Sources */ = {isa = PBXBuildFile; fileRef = 17CE00581606E8FA001C9438 /* floattransposeOP.c */; };
+		17CE0060160848D6001C9438 /* prefixSumCilk.c in Sources */ = {isa = PBXBuildFile; fileRef = 17CE005F160848D6001C9438 /* prefixSumCilk.c */; };
 		17EE904A15ECAAD900D995CF /* transposeIP.c in Sources */ = {isa = PBXBuildFile; fileRef = 17EE904915ECAAD900D995CF /* transposeIP.c */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +24,12 @@
 		17CE0054160490ED001C9438 /* basictransposeOP.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = basictransposeOP.c; sourceTree = "<group>"; };
 		17CE00561606E8D9001C9438 /* floattransposeIP.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = floattransposeIP.c; sourceTree = "<group>"; };
 		17CE00581606E8FA001C9438 /* floattransposeOP.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = floattransposeOP.c; sourceTree = "<group>"; };
+		17CE005A1608478E001C9438 /* one_caller.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = one_caller.sh; sourceTree = "<group>"; };
+		17CE005B16084827001C9438 /* floatipbatch_caller.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = floatipbatch_caller.sh; sourceTree = "<group>"; };
+		17CE005C16084827001C9438 /* floatopbatch_caller.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = floatopbatch_caller.sh; sourceTree = "<group>"; };
+		17CE005D1608488B001C9438 /* prefixbatch_caller.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = prefixbatch_caller.sh; sourceTree = "<group>"; };
+		17CE005F160848D6001C9438 /* prefixSumCilk.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = prefixSumCilk.c; sourceTree = "<group>"; };
+		17CE00611608493C001C9438 /* opbasic_batch_caller.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = opbasic_batch_caller.sh; sourceTree = "<group>"; };
 		17EE903A15EA869300D995CF /* libtranspose.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libtranspose.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		17EE904915ECAAD900D995CF /* transposeIP.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = transposeIP.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -38,10 +45,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		17CE005E1608489F001C9438 /* Shell Scripts */ = {
+			isa = PBXGroup;
+			children = (
+				17CE00611608493C001C9438 /* opbasic_batch_caller.sh */,
+				17CE005A1608478E001C9438 /* one_caller.sh */,
+				17CE005B16084827001C9438 /* floatipbatch_caller.sh */,
+				17CE005C16084827001C9438 /* floatopbatch_caller.sh */,
+				17CE005D1608488B001C9438 /* prefixbatch_caller.sh */,
+			);
+			name = "Shell Scripts";
+			sourceTree = "<group>";
+		};
 		17EE902F15EA869200D995CF = {
 			isa = PBXGroup;
 			children = (
 				17CCE7C815FC6A810037B409 /* prefixSum.c */,
+				17CE005F160848D6001C9438 /* prefixSumCilk.c */,
+				17CE005E1608489F001C9438 /* Shell Scripts */,
 				17EE904915ECAAD900D995CF /* transposeIP.c */,
 				17CE00581606E8FA001C9438 /* floattransposeOP.c */,
 				17CE00561606E8D9001C9438 /* floattransposeIP.c */,
@@ -127,6 +148,7 @@
 				17CE0055160490ED001C9438 /* basictransposeOP.c in Sources */,
 				17CE00571606E8D9001C9438 /* floattransposeIP.c in Sources */,
 				17CE00591606E8FA001C9438 /* floattransposeOP.c in Sources */,
+				17CE0060160848D6001C9438 /* prefixSumCilk.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
