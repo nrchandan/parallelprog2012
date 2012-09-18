@@ -5,7 +5,7 @@
  * Assignment 1.2 of Parallel Programming course during 
  * Monsoon 2012 semester offered by Suresh Purini.
  * 
- * Out-of-place matrix transpose of dimension m x n.
+ * Out-of-place matrix transpose of dimension m x n (m rows, n columns)
  * Input dimensions m and n assumed to be power of 2.
  *
  */
@@ -181,10 +181,9 @@ int main(int argc, char *argv[])
 /**
  * Transpose matrix a and place it into b.
  * a and b can be sub-matrices (mxn, nxm) of another matrix (MxN, NxM).
- * For basic transpose, s equals n.
  *
  */
-void transpose(int *a, int *b, int M, int N, int m, int n) 
+void transpose(int *a, int *b, int M, int N, int m, int n)
 {
     int i, j;
     
@@ -246,16 +245,29 @@ void transpose2Tiled(int *a, int *b, int m, int n, int s1, int s2)
 
 void transposeCacheOblivious(int *a, int *b, int M, int N, int m, int n, int i, int j, int s)
 {   
-    if (m>s) {
+    printf("m=%d, n=%d, i=%d, j=%d", m, n, i, j);
+    if (m>s && n>s) {
+        printf(", m>s && n>s\n");
+        // if both row and column dimensions are bigger than the tilesize, break up the matrix 
+        // into four sub-matrices of size m/2 x n/2
+        transposeCacheOblivious(A(a,N,i,j), A(b,M,j,i), M, N, m/2, n/2, i, j, s);
+        transposeCacheOblivious(A(a,N,i,j+n/2), A(b,M,j+n/2,i), M, N, m/2, n/2, i, j+n/2, s);
+        transposeCacheOblivious(A(a,N,i+m/2,j), A(b,M,j,i+m/2), M, N, m/2, n/2, i+m/2, j, s);
+        transposeCacheOblivious(A(a,N,i+m/2,j+n/2), A(b,M,j+n/2,i+m/2), M, N, m/2, n/2, i+m/2, j+n/2, s);
+    } else if (m>s) {
+        printf(", m>s\n");
         // if row dimension is bigger than the tilesize, break up the matrix into two sub-matrices.
         transposeCacheOblivious(A(a,N,i,j), A(b,M,j,i), M, N, m/2, n, i, j, s);
         transposeCacheOblivious(A(a,N,i+m/2,j), A(b,M,j,i+m/2), M, N, m/2, n, i+m/2, j, s);
-    }
-    if (n>s) {
+    } else if (n>s) {
+        printf(", n>s\n");
         // if column dimension is bigger than the tilesize, break up the matrix into two sub-matrices.
         transposeCacheOblivious(A(a,N,i,j), A(b,M,j,i), M, N, m, n/2, i, j, s);
         transposeCacheOblivious(A(a,N,i,j+n/2), A(b,M,j+n/2,i), M, N, m, n/2, i, j+n/2, s);
     } else {
+//        printf(" m=s && n=s\n");
+        printf(", Transposing %d x %d matrix at position %d, %d\n", m, n, i, j);
+        printf("First element of matrix a is %d\n", *a);
         transpose(a, b, M, N, m, n);
         return;
     }
