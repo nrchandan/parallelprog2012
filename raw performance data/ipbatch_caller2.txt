@@ -1,0 +1,51 @@
+Performance counter stats for './floattransposeIP -n 8192 -basic -noio' (5 runs):|2,824,325,269|1,596,074,001|0.57|40,684,884|39,642,196|97.437|71,944,463|46,476,578|64.60|0.854731948
+Performance counter stats for './floattransposeIP -n 16384 -basic -noio' (5 runs):|11,197,061,043|6,376,130,308|0.57|166,238,681|159,295,005|95.823|284,015,890|190,358,849|67.02|3.385298624
+Performance counter stats for './floattransposeIP -n 32768 -basic -noio' (5 runs):|57,893,454,162|25,498,240,980|0.44|691,508,760|638,177,946|92.288|1,138,060,680|800,348,472|70.33|17.502657432
+Performance counter stats for './floattransposeIP -n 8192 -1tiled -s1 4 -noio' (5 runs):|1,905,568,909|2,371,895,252|1.24|23,361,380|22,848,265|97.804|136,709,466|28,185,538|20.62|0.577271051
+Performance counter stats for './floattransposeIP -n 8192 -1tiled -s1 8 -noio' (5 runs):|1,461,905,629|1,986,377,393|1.36|16,098,403|15,243,243|94.688|102,676,965|23,827,486|23.21|0.443275363
+Performance counter stats for './floattransposeIP -n 8192 -1tiled -s1 16 -noio' (5 runs):|1,653,125,458|1,814,545,804|1.10|37,465,249|12,076,173|32.233|92,990,214|54,469,532|58.58|0.500931488
+Performance counter stats for './floattransposeIP -n 8192 -1tiled -s1 32 -noio' (5 runs):|2,163,631,388|1,738,418,830|0.80|63,208,072|10,253,851|16.222|89,985,885|71,772,368|79.76|0.655098184
+Performance counter stats for './floattransposeIP -n 16384 -1tiled -s1 4 -noio' (5 runs):|7,524,045,723|9,473,929,202|1.26|87,250,143|85,716,358|98.242|543,001,112|106,497,272|19.61|2.275984283
+Performance counter stats for './floattransposeIP -n 16384 -1tiled -s1 8 -noio' (5 runs):|5,824,324,058|7,941,831,023|1.36|63,465,865|60,398,238|95.166|406,096,079|94,177,416|23.19|1.762619106
+Performance counter stats for './floattransposeIP -n 16384 -1tiled -s1 16 -noio' (5 runs):|6,634,232,635|7,261,145,381|1.09|150,105,348|48,380,524|32.231|368,431,200|217,523,853|59.04|2.006672345
+Performance counter stats for './floattransposeIP -n 16384 -1tiled -s1 32 -noio' (5 runs):|8,635,272,853|6,941,859,364|0.80|253,205,952|41,052,471|16.213|357,123,027|286,538,290|80.24|2.610531120
+Performance counter stats for './floattransposeIP -n 32768 -1tiled -s1 4 -noio' (5 runs):|30,119,741,604|37,885,570,883|1.26|350,164,310|343,454,875|98.084|2,168,719,672|427,451,256|19.71|9.108845269
+Performance counter stats for './floattransposeIP -n 32768 -1tiled -s1 8 -noio' (5 runs):|23,567,640,713|31,753,450,211|1.35|253,815,875|240,932,722|94.924|1,621,599,066|374,363,709|23.09|7.128484662
+Performance counter stats for './floattransposeIP -n 32768 -1tiled -s1 16 -noio' (5 runs):|28,052,269,361|29,037,234,190|1.04|614,327,613|190,802,671|31.059|1,469,479,170|898,201,854|61.12|8.487922125
+Performance counter stats for './floattransposeIP -n 32768 -1tiled -s1 32 -noio' (5 runs):|36,017,508,760|27,772,581,575|0.77|1,272,393,633|157,022,463|12.341|1,425,685,092|1,429,386,240|100.26|10.891838106
+Performance counter stats for './floattransposeIP -n 8192 -2tiled -s1 4 -s2 2 -noio' (5 runs):|2,672,150,901|3,682,899,423|1.38|19,217,771|18,840,772|98.038|348,598,274|23,781,172|6.82|0.808560555
+Performance counter stats for './floattransposeIP -n 8192 -2tiled -s1 8 -s2 2 -noio' (5 runs):|2,099,171,957|3,450,975,432|1.64|16,247,946|15,530,788|95.586|328,436,987|23,383,327|7.12|0.635495178
+Performance counter stats for './floattransposeIP -n 8192 -2tiled -s1 8 -s2 4 -noio' (5 runs):|1,558,310,962|2,493,570,342|1.60|15,928,524|15,035,535|94.394|155,513,498|23,175,104|14.90|0.472484705
+Performance counter stats for './floattransposeIP -n 8192 -2tiled -s1 16 -s2 2 -noio' (5 runs):|1,921,253,124|3,371,153,815|1.75|35,419,323|12,358,444|34.892|327,041,216|48,087,115|14.70|0.585862863
+Performance counter stats for './floattransposeIP -n 8192 -2tiled -s1 16 -s2 4 -noio' (5 runs):|1,451,925,331|2,448,974,353|1.69|29,677,040|12,332,574|41.556|151,302,927|40,371,591|26.68|0.440635153
+Performance counter stats for './floattransposeIP -n 8192 -2tiled -s1 16 -s2 8 -noio' (5 runs):|1,478,346,692|2,040,122,834|1.38|30,870,479|12,557,925|40.679|112,503,458|42,179,862|37.49|0.448709949
+Performance counter stats for './floattransposeIP -n 8192 -2tiled -s1 32 -s2 2 -noio' (5 runs):|1,768,891,971|3,343,998,936|1.89|44,206,538|10,289,981|23.277|328,358,290|53,791,128|16.38|0.536030239
+Performance counter stats for './floattransposeIP -n 8192 -2tiled -s1 32 -s2 4 -noio' (5 runs):|1,351,840,105|2,440,191,636|1.81|31,705,361|10,471,934|33.029|151,429,831|38,930,479|25.71|0.410616366
+Performance counter stats for './floattransposeIP -n 8192 -2tiled -s1 32 -s2 8 -noio' (5 runs):|1,360,594,186|2,047,074,514|1.50|29,484,424|10,419,275|35.338|114,908,516|39,806,930|34.64|0.415903070
+Performance counter stats for './floattransposeIP -n 8192 -2tiled -s1 32 -s2 16 -noio' (5 runs):|1,603,654,501|1,857,045,450|1.16|39,221,576|8,317,148|21.206|100,804,701|55,870,990|55.42|0.489838459
+Performance counter stats for './floattransposeIP -n 16384 -2tiled -s1 4 -s2 2 -noio' (5 runs):|10,716,881,059|14,719,055,674|1.37|76,884,753|75,330,198|97.978|1,391,419,966|94,792,907|6.81|3.238159272
+Performance counter stats for './floattransposeIP -n 16384 -2tiled -s1 8 -s2 2 -noio' (5 runs):|8,568,651,149|13,783,296,790|1.61|62,152,859|59,496,479|95.726|1,310,878,145|90,395,849|6.90|2.590853923
+Performance counter stats for './floattransposeIP -n 16384 -2tiled -s1 8 -s2 4 -noio' (5 runs):|6,612,925,541|9,964,066,457|1.51|63,903,627|60,514,689|94.697|618,400,669|93,362,475|15.10|1.999754325
+Performance counter stats for './floattransposeIP -n 16384 -2tiled -s1 16 -s2 2 -noio' (5 runs):|7,795,227,177|13,478,233,720|1.73|129,939,465|48,842,113|37.588|1,305,454,919|180,473,490|13.82|2.357541422
+Performance counter stats for './floattransposeIP -n 16384 -2tiled -s1 16 -s2 4 -noio' (5 runs):|5,926,844,042|9,797,763,595|1.65|115,835,996|49,491,668|42.726|602,357,642|157,973,839|26.23|1.792620817
+Performance counter stats for './floattransposeIP -n 16384 -2tiled -s1 16 -s2 8 -noio' (5 runs):|5,936,802,247|8,162,073,083|1.37|122,796,386|50,221,593|40.898|446,122,915|167,766,202|37.61|1.795718242
+Performance counter stats for './floattransposeIP -n 16384 -2tiled -s1 32 -s2 2 -noio' (5 runs):|7,354,726,969|13,367,989,963|1.82|171,365,067|40,873,437|23.852|1,310,947,088|209,512,449|15.98|2.223727222
+Performance counter stats for './floattransposeIP -n 16384 -2tiled -s1 32 -s2 4 -noio' (5 runs):|5,534,287,549|9,757,159,093|1.76|122,204,066|41,813,423|34.216|602,921,333|150,248,187|24.92|1.673177189
+Performance counter stats for './floattransposeIP -n 16384 -2tiled -s1 32 -s2 8 -noio' (5 runs):|5,500,442,448|8,171,883,728|1.49|117,095,123|41,716,902|35.627|456,478,893|158,091,097|34.63|1.664572404
+Performance counter stats for './floattransposeIP -n 16384 -2tiled -s1 32 -s2 16 -noio' (5 runs):|6,439,999,482|7,410,751,715|1.15|157,184,193|33,185,775|21.113|401,523,831|223,049,879|55.55|1.947632783
+Performance counter stats for './floattransposeIP -n 32768 -2tiled -s1 4 -s2 2 -noio' (5 runs):|43,354,351,943|58,861,589,907|1.36|307,964,080|300,807,132|97.676|5,562,028,891|379,952,108|6.83|13.106439872
+Performance counter stats for './floattransposeIP -n 32768 -2tiled -s1 8 -s2 2 -noio' (5 runs):|34,828,792,884|55,123,929,251|1.58|249,582,163|238,283,738|95.473|5,239,845,751|363,839,021|6.94|10.526721014
+Performance counter stats for './floattransposeIP -n 32768 -2tiled -s1 8 -s2 4 -noio' (5 runs):|26,141,080,558|39,848,852,998|1.52|254,069,989|240,441,962|94.636|2,469,817,003|372,039,827|15.06|7.900981938
+Performance counter stats for './floattransposeIP -n 32768 -2tiled -s1 16 -s2 2 -noio' (5 runs):|31,287,844,061|53,904,969,292|1.72|519,951,824|195,358,320|37.572|5,218,402,646|721,692,724|13.83|9.454078564
+Performance counter stats for './floattransposeIP -n 32768 -2tiled -s1 16 -s2 4 -noio' (5 runs):|23,877,820,143|39,184,094,375|1.64|463,698,171|199,368,600|42.995|2,405,263,423|631,071,808|26.24|7.218800535
+Performance counter stats for './floattransposeIP -n 32768 -2tiled -s1 16 -s2 8 -noio' (5 runs):|23,886,951,896|32,632,875,229|1.37|491,764,569|201,110,887|40.896|1,780,835,456|669,532,792|37.60|7.222658992
+Performance counter stats for './floattransposeIP -n 32768 -2tiled -s1 32 -s2 2 -noio' (5 runs):|29,587,007,952|53,457,406,366|1.81|683,967,359|164,131,558|23.997|5,241,325,834|835,461,353|15.94|8.941957961
+Performance counter stats for './floattransposeIP -n 32768 -2tiled -s1 32 -s2 4 -noio' (5 runs):|22,293,507,761|39,006,729,323|1.75|489,670,647|168,927,573|34.498|2,408,094,252|601,629,172|24.98|6.749224403
+Performance counter stats for './floattransposeIP -n 32768 -2tiled -s1 32 -s2 8 -noio' (5 runs):|22,500,253,191|32,673,395,111|1.45|470,011,087|170,435,618|36.262|1,822,928,015|632,334,252|34.69|6.804326576
+Performance counter stats for './floattransposeIP -n 32768 -2tiled -s1 32 -s2 16 -noio' (5 runs):|27,157,187,698|29,648,960,880|1.09|644,806,896|130,090,567|20.175|1,601,071,769|924,913,759|57.77|8.208834622
+Performance counter stats for './floattransposeIP -n 8192 -cacheob -noio' (5 runs):|2,209,112,525|3,191,338,468|1.44|36,832,406|11,754,499|31.913|348,584,466|52,851,133|15.16|0.676443148
+Performance counter stats for './floattransposeIP -n 16384 -cacheob -noio' (5 runs):|9,188,891,718|12,901,535,043|1.40|144,214,273|60,800,617|42.160|1,424,218,465|213,663,616|15.00|2.780518510
+Performance counter stats for './floattransposeIP -n 32768 -cacheob -noio' (5 runs):|40,684,762,075|52,136,831,127|1.28|588,905,996|316,146,697|53.684|5,828,735,532|890,401,918|15.28|12.298586840
+Performance counter stats for './floattransposeIP -n 8192 -mkl -noio' (5 runs):|2,792,551,394|1,431,383,481|0.51|59,458,321|39,693,623|66.759|72,600,476|64,844,818|89.32|0.852471090
+Performance counter stats for './floattransposeIP -n 16384 -mkl -noio' (5 runs):|11,718,137,889|5,706,446,347|0.49|285,463,490|159,511,037|55.878|285,164,938|303,909,679|106.57|3.542038261
+Performance counter stats for './floattransposeIP -n 32768 -mkl -noio' (5 runs):|68,885,579,544|22,832,072,767|0.33|1,542,208,615|680,539,307|44.128|1,142,152,631|1,628,765,633|142.60|20.807963248

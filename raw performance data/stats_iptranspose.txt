@@ -1,0 +1,114 @@
+Performance counter stats for './ipTranspose -n 512 -basic -noio' (5 runs):|4,534,313|6,159,176|1.36|164,018|10,533|6.422|684,825|323,062|47.17|0.002461452
+Performance counter stats for './ipTranspose -n 1024 -basic -noio' (5 runs):|25,431,399|18,259,641|0.72|677,517|42,314|6.245|1,702,827|1,174,767|68.99|0.008700842
+Performance counter stats for './ipTranspose -n 4096 -basic -noio' (5 runs):|603,927,298|330,736,793|0.55|15,723,940|9,590,977|60.996|18,127,025|18,118,423|99.95|0.184974528
+Performance counter stats for './ipTranspose -n 8192 -basic -noio' (5 runs):|2,739,439,494|1,322,773,712|0.48|61,462,349|39,629,124|64.477|71,523,515|66,614,700|93.14|0.834672259
+Performance counter stats for './ipTranspose -n 16384 -basic -noio' (5 runs):|11,538,526,994|5,300,004,770|0.46|285,215,898|159,482,839|55.917|283,822,210|303,536,837|106.95|3.513077775
+Performance counter stats for './ipTranspose -n 32256 -basic -noio' (5 runs):|36,401,678,078|20,527,490,583|0.56|624,977,947|609,410,689|97.509|1,095,333,216|739,300,422|67.50|11.087484488
+Performance counter stats for './ipTranspose -n 512 -1tiled -s1 4 -noio' (5 runs):|4,127,901|7,774,613|1.88|100,696|8,070|8.014|923,618|132,434|14.34|0.002092141
+Performance counter stats for './ipTranspose -n 512 -1tiled -s1 8 -noio' (5 runs):|3,601,561|6,677,056|1.85|77,198|6,819|8.833|791,364|97,209|12.28|0.001849150
+Performance counter stats for './ipTranspose -n 512 -1tiled -s1 16 -noio' (5 runs):|2,811,274|6,730,816|2.39|62,951|8,642|13.729|754,762|95,868|12.70|0.001809905
+Performance counter stats for './ipTranspose -n 512 -1tiled -s1 32 -noio' (5 runs):|2,741,824|5,376,691|1.96|51,511|8,673|16.836|740,766|226,397|30.56|0.002062678
+Performance counter stats for './ipTranspose -n 1024 -1tiled -s1 4 -noio' (5 runs):|19,672,077|35,624,443|1.81|430,962|98,577|22.874|2,358,301|412,715|17.50|0.006807176
+Performance counter stats for './ipTranspose -n 1024 -1tiled -s1 8 -noio' (5 runs):|17,967,961|28,660,102|1.60|288,538|89,760|31.109|1,746,547|358,496|20.53|0.005927916
+Performance counter stats for './ipTranspose -n 1024 -1tiled -s1 16 -noio' (5 runs):|20,030,601|24,623,932|1.23|228,634|89,082|38.963|1,808,017|732,254|40.50|0.006662062
+Performance counter stats for './ipTranspose -n 1024 -1tiled -s1 32 -noio' (5 runs):|23,473,550|22,039,142|0.94|188,471|85,885|45.569|1,910,460|1,063,238|55.65|0.008192369
+Performance counter stats for './ipTranspose -n 4096 -1tiled -s1 4 -noio' (5 runs):|436,935,262|543,838,773|1.24|5,892,739|5,618,163|95.340|34,481,316|7,073,475|20.51|0.139041156
+Performance counter stats for './ipTranspose -n 4096 -1tiled -s1 8 -noio' (5 runs):|329,171,351|446,956,155|1.36|3,954,191|3,796,110|96.002|25,996,032|5,971,878|22.97|0.104079507
+Performance counter stats for './ipTranspose -n 4096 -1tiled -s1 16 -noio' (5 runs):|333,881,606|404,102,013|1.21|3,580,266|3,067,840|85.687|23,381,920|12,913,502|55.23|0.106676859
+Performance counter stats for './ipTranspose -n 4096 -1tiled -s1 32 -noio' (5 runs):|500,181,880|380,655,764|0.76|11,487,892|2,457,978|21.396|22,878,837|17,918,384|78.32|0.159032575
+Performance counter stats for './ipTranspose -n 8192 -1tiled -s1 4 -noio' (5 runs):|1,845,546,650|2,177,801,038|1.18|23,262,073|22,866,160|98.298|136,059,415|28,001,463|20.58|0.581102600
+Performance counter stats for './ipTranspose -n 8192 -1tiled -s1 8 -noio' (5 runs):|1,361,324,981|1,785,926,497|1.31|16,055,931|15,195,251|94.639|101,852,104|23,645,367|23.22|0.430197671
+Performance counter stats for './ipTranspose -n 8192 -1tiled -s1 16 -noio' (5 runs):|1,613,600,465|1,609,937,192|1.00|37,143,124|12,091,531|32.554|92,421,239|53,951,438|58.38|0.508315609
+Performance counter stats for './ipTranspose -n 8192 -1tiled -s1 32 -noio' (5 runs):|2,092,913,322|1,529,200,827|0.73|63,413,255|10,311,899|16.261|89,370,124|71,875,343|80.42|0.658870273
+Performance counter stats for './ipTranspose -n 16384 -1tiled -s1 4 -noio' (5 runs):|7,442,086,588|8,688,488,570|1.17|89,714,650|88,019,386|98.110|542,958,502|108,528,719|19.99|2.342461123
+Performance counter stats for './ipTranspose -n 16384 -1tiled -s1 8 -noio' (5 runs):|5,398,362,133|7,131,629,972|1.32|62,778,809|59,579,908|94.904|405,320,653|93,484,900|23.06|1.639492516
+Performance counter stats for './ipTranspose -n 16384 -1tiled -s1 16 -noio' (5 runs):|6,431,207,614|6,438,423,675|1.00|148,698,889|48,290,844|32.476|366,878,408|214,975,952|58.60|1.946363981
+Performance counter stats for './ipTranspose -n 16384 -1tiled -s1 32 -noio' (5 runs):|8,440,997,772|6,105,804,999|0.72|255,437,270|41,113,155|16.095|356,290,023|287,929,975|80.81|2.553331041
+Performance counter stats for './ipTranspose -n 32256 -1tiled -s1 4 -noio' (5 runs):|26,589,507,472|33,715,887,520|1.27|362,768,170|352,453,677|97.157|2,100,073,394|429,190,834|20.44|8.050467690
+Performance counter stats for './ipTranspose -n 32256 -1tiled -s1 8 -noio' (5 runs):|19,685,676,259|27,634,904,522|1.40|259,415,031|252,217,405|97.225|1,568,011,262|327,822,028|20.91|5.956171294
+Performance counter stats for './ipTranspose -n 32256 -1tiled -s1 16 -noio' (5 runs):|16,939,189,886|24,940,184,937|1.47|199,981,812|194,480,482|97.249|1,419,670,306|310,105,657|21.84|5.129605009
+Performance counter stats for './ipTranspose -n 32256 -1tiled -s1 32 -noio' (5 runs):|18,881,844,579|23,672,117,288|1.25|162,768,958|157,390,314|96.696|1,375,437,602|819,645,314|59.59|5.727371201
+Performance counter stats for './ipTranspose -n 512 -2tiled -s1 4 -s2 2 -noio' (5 runs):|6,753,034|11,378,193|1.68|77,398|9,599|12.402|1,755,444|96,905|5.52|0.002664070
+Performance counter stats for './ipTranspose -n 512 -2tiled -s1 4 -s2 4 -noio' (5 runs):|2,554,039|5,125,880|2.01|34,443|8,502|24.684|411,531|36,433|8.85|0.001453201
+Performance counter stats for './ipTranspose -n 512 -2tiled -s1 8 -s2 2 -noio' (5 runs):|5,849,770|9,510,457|1.63|70,791|8,995|12.706|1,677,144|82,045|4.89|0.002644781
+Performance counter stats for './ipTranspose -n 512 -2tiled -s1 8 -s2 4 -noio' (5 runs):|4,215,353|8,463,780|2.01|74,635|8,929|11.963|1,000,624|93,210|9.32|0.002074274
+Performance counter stats for './ipTranspose -n 512 -2tiled -s1 8 -s2 8 -noio' (5 runs):|2,175,859|5,244,469|2.41|33,915|8,688|25.618|409,990|35,110|8.56|0.001476529
+Performance counter stats for './ipTranspose -n 512 -2tiled -s1 16 -s2 2 -noio' (5 runs):|6,243,430|10,614,310|1.70|58,323|9,172|15.726|1,670,206|95,557|5.72|0.002502389
+Performance counter stats for './ipTranspose -n 512 -2tiled -s1 16 -s2 4 -noio' (5 runs):|3,455,043|7,547,423|2.18|61,374|8,764|14.279|983,682|84,782|8.62|0.002078422
+Performance counter stats for './ipTranspose -n 512 -2tiled -s1 16 -s2 8 -noio' (5 runs):||6,359,981|2.77|62,151|8,602|13.841|831,545|88,022|10.59|0.001854972
+Performance counter stats for './ipTranspose -n 512 -2tiled -s1 16 -s2 16 -noio' (5 runs):|1,905,777|5,208,541|2.73|33,755|8,538|25.294|409,207|34,756|8.49|0.001456728
+Performance counter stats for './ipTranspose -n 512 -2tiled -s1 32 -s2 2 -noio' (5 runs):|6,585,669|10,349,513|1.57|42,423|8,756|20.640|1,675,305|142,475|8.50|0.002429460
+Performance counter stats for './ipTranspose -n 512 -2tiled -s1 32 -s2 4 -noio' (5 runs):||6,783,466|2.32|50,410|9,175|18.201|981,500|147,272|15.00|0.002058023
+Performance counter stats for './ipTranspose -n 512 -2tiled -s1 32 -s2 8 -noio' (5 runs):|3,336,007|6,334,934|1.90|52,821|8,898|16.846|839,994|123,523|14.71|0.001905961
+Performance counter stats for './ipTranspose -n 512 -2tiled -s1 32 -s2 16 -noio' (5 runs):||5,590,272|2.88|51,705|9,193|17.780|785,677|132,385|16.85|0.001837402
+Performance counter stats for './ipTranspose -n 1024 -2tiled -s1 4 -s2 2 -noio' (5 runs):|25,709,744|53,950,380|2.10|354,412|27,257|7.691|5,626,107|435,418|7.74|0.008735941
+Performance counter stats for './ipTranspose -n 1024 -2tiled -s1 4 -s2 4 -noio' (5 runs):|10,624,291|16,390,018|1.54|78,630|27,394|34.839|645,504|129,106|20.00|0.003579847
+Performance counter stats for './ipTranspose -n 1024 -2tiled -s1 8 -s2 2 -noio' (5 runs):|23,530,137|50,353,910|2.14|280,953|29,484|10.494|5,257,300|369,629|7.03|0.008011014
+Performance counter stats for './ipTranspose -n 1024 -2tiled -s1 8 -s2 4 -noio' (5 runs):|19,007,236|37,318,035|1.96|283,303|38,710|13.664|2,479,392|306,528|12.36|0.006189538
+Performance counter stats for './ipTranspose -n 1024 -2tiled -s1 8 -s2 8 -noio' (5 runs):|10,617,015|16,453,417|1.55|86,923|28,098|32.325|646,869|127,834|19.76|0.003592564
+Performance counter stats for './ipTranspose -n 1024 -2tiled -s1 16 -s2 2 -noio' (5 runs):|22,755,842|49,395,936|2.17|229,435|26,517|11.557|5,190,809|597,220|11.51|0.008000792
+Performance counter stats for './ipTranspose -n 1024 -2tiled -s1 16 -s2 4 -noio' (5 runs):|18,760,617|37,192,255|1.98|230,898|32,456|14.056|2,430,063|562,755|23.16|0.006053492
+Performance counter stats for './ipTranspose -n 1024 -2tiled -s1 16 -s2 8 -noio' (5 runs):|17,516,224|30,185,149|1.72|244,135|32,419|13.279|1,831,660|655,790|35.80|0.005668593
+Performance counter stats for './ipTranspose -n 1024 -2tiled -s1 16 -s2 16 -noio' (5 runs):|10,585,603|16,826,625|1.59|79,010|27,417|34.700|645,940|118,871|18.40|0.003536944
+Performance counter stats for './ipTranspose -n 1024 -2tiled -s1 32 -s2 2 -noio' (5 runs):|21,864,213|51,361,664|2.35|187,751|28,995|15.443|5,145,173|570,049|11.08|0.007656343
+Performance counter stats for './ipTranspose -n 1024 -2tiled -s1 32 -s2 4 -noio' (5 runs):|18,300,277|38,378,106|2.10|204,845|31,305|15.282|2,361,934|565,014|23.92|0.005915135
+Performance counter stats for './ipTranspose -n 1024 -2tiled -s1 32 -s2 8 -noio' (5 runs):|17,905,471|30,135,244|1.68|213,629|31,559|14.773|1,926,969|588,563|30.54|0.005879191
+Performance counter stats for './ipTranspose -n 1024 -2tiled -s1 32 -s2 16 -noio' (5 runs):|19,891,895|25,793,641|1.30|179,072|30,283|16.911|1,925,571|697,152|36.20|0.006442195
+Performance counter stats for './ipTranspose -n 4096 -2tiled -s1 4 -s2 2 -noio' (5 runs):|661,061,973|867,549,782|1.31|4,807,836|4,588,931|95.447|87,480,538|5,925,315|6.77|0.201231709
+Performance counter stats for './ipTranspose -n 4096 -2tiled -s1 4 -s2 4 -noio' (5 runs):|135,865,103|256,718,076|1.89|1,124,242|1,048,214|93.237|1,285,635|2,140,044|166.46|0.042557566
+Performance counter stats for './ipTranspose -n 4096 -2tiled -s1 8 -s2 2 -noio' (5 runs):|517,305,737|807,587,295|1.56|4,016,980|3,796,881|94.521|82,237,063|5,841,898|7.10|0.158300113
+Performance counter stats for './ipTranspose -n 4096 -2tiled -s1 8 -s2 4 -noio' (5 runs):|362,970,040|573,888,841|1.58|3,928,786|3,693,165|94.003|38,999,664|5,797,857|14.87|0.110898023
+Performance counter stats for './ipTranspose -n 4096 -2tiled -s1 8 -s2 8 -noio' (5 runs):|135,168,316|255,756,851|1.89|1,136,230|1,046,200|92.076|1,303,390|2,149,093|164.88|0.042320725
+Performance counter stats for './ipTranspose -n 4096 -2tiled -s1 16 -s2 2 -noio' (5 runs):|430,942,009|785,180,752|1.82|3,597,038|3,067,208|85.270|82,060,974|10,145,403|12.36|0.131813663
+Performance counter stats for './ipTranspose -n 4096 -2tiled -s1 16 -s2 4 -noio' (5 runs):|316,310,994|564,534,760|1.78|3,562,795|2,968,554|83.321|38,141,130|9,625,761|25.24|0.097200936
+Performance counter stats for './ipTranspose -n 4096 -2tiled -s1 16 -s2 8 -noio' (5 runs):|310,454,768|459,336,206|1.48|3,586,139|3,083,789|85.992|28,347,442|10,309,505|36.37|0.095813754
+Performance counter stats for './ipTranspose -n 4096 -2tiled -s1 16 -s2 16 -noio' (5 runs):|135,353,034|257,362,334|1.90|1,122,100|1,046,953|93.303|1,362,183|2,161,431|158.67|0.042805347
+Performance counter stats for './ipTranspose -n 4096 -2tiled -s1 32 -s2 2 -noio' (5 runs):|445,532,023|777,038,287|1.74|8,639,509|2,580,918|29.873|82,211,101|11,581,563|14.09|0.136049126
+Performance counter stats for './ipTranspose -n 4096 -2tiled -s1 32 -s2 4 -noio' (5 runs):|314,579,449|560,773,668|1.78|6,642,761|2,583,778|38.896|38,005,060|9,476,077|24.93|0.096561589
+Performance counter stats for './ipTranspose -n 4096 -2tiled -s1 32 -s2 8 -noio' (5 runs):|299,306,902|458,779,427|1.53|5,909,210|2,535,866|42.914|28,964,753|9,786,451|33.79|0.091814966
+Performance counter stats for './ipTranspose -n 4096 -2tiled -s1 32 -s2 16 -noio' (5 runs):|330,716,541|412,515,917|1.25|6,178,796|2,130,308|34.478|25,473,188|13,564,153|53.25|0.101213324
+Performance counter stats for './ipTranspose -n 8192 -2tiled -s1 4 -s2 2 -noio' (5 runs):|2,554,352,691|3,470,736,632|1.36|19,186,838|18,802,756|97.998|348,107,932|23,786,175|6.83|0.773956867
+Performance counter stats for './ipTranspose -n 8192 -2tiled -s1 4 -s2 4 -noio' (5 runs):|525,382,099|1,021,949,826|1.95|4,477,916|4,243,663|94.769|3,757,024|8,679,483|231.02|0.160148075
+Performance counter stats for './ipTranspose -n 8192 -2tiled -s1 8 -s2 2 -noio' (5 runs):|2,006,530,303|3,219,617,239|1.60|16,182,643|15,464,466|95.562|327,731,690|23,327,604|7.12|0.608115470
+Performance counter stats for './ipTranspose -n 8192 -2tiled -s1 8 -s2 4 -noio' (5 runs):|1,501,790,963|2,295,486,895|1.53|15,869,248|15,031,855|94.723|154,705,578|23,110,352|14.94|0.455122262
+Performance counter stats for './ipTranspose -n 8192 -2tiled -s1 8 -s2 8 -noio' (5 runs):|524,605,477|1,021,066,796|1.95|4,443,178|4,248,360|95.615|3,831,616|8,721,960|227.63|0.160169311
+Performance counter stats for './ipTranspose -n 8192 -2tiled -s1 16 -s2 2 -noio' (5 runs):|1,832,591,408|3,133,562,492|1.71|34,466,565|12,403,700|35.988|326,363,290|46,167,046|14.15|0.555861884
+Performance counter stats for './ipTranspose -n 8192 -2tiled -s1 16 -s2 4 -noio' (5 runs):|1,377,974,181|2,251,851,306|1.63|29,274,051|12,248,481|41.841|150,734,223|39,698,363|26.34|0.417468892
+Performance counter stats for './ipTranspose -n 8192 -2tiled -s1 16 -s2 8 -noio' (5 runs):|1,391,306,865|1,834,445,986|1.32|30,298,540|12,474,853|41.173|111,757,489|41,527,111|37.16|0.422786104
+Performance counter stats for './ipTranspose -n 8192 -2tiled -s1 16 -s2 16 -noio' (5 runs):|524,322,370|1,022,874,710|1.95|4,480,682|4,218,083|94.139|3,813,065|8,718,601|228.65|0.160161652
+Performance counter stats for './ipTranspose -n 8192 -2tiled -s1 32 -s2 2 -noio' (5 runs):|1,640,842,146|3,103,583,448|1.89|44,037,013|10,427,360|23.679|327,848,609|51,624,062|15.75|0.497185403
+Performance counter stats for './ipTranspose -n 8192 -2tiled -s1 32 -s2 4 -noio' (5 runs):|1,271,506,328|2,238,692,354|1.76|31,011,618|10,398,808|33.532|150,787,093|38,197,915|25.33|0.386069051
+Performance counter stats for './ipTranspose -n 8192 -2tiled -s1 32 -s2 8 -noio' (5 runs):|1,284,067,241|1,836,709,506|1.43|29,300,770|10,373,848|35.405|114,271,321|39,574,510|34.63|0.389228713
+Performance counter stats for './ipTranspose -n 8192 -2tiled -s1 32 -s2 16 -noio' (5 runs):|1,551,704,000|1,643,897,986|1.06|38,794,646|8,357,716|21.543|100,430,132|55,166,023|54.93|0.470297441
+Performance counter stats for './ipTranspose -n 16384 -2tiled -s1 4 -s2 2 -noio' (5 runs):|10,320,424,291|13,876,299,281|1.34|76,843,275|75,325,240|98.025|1,390,396,059|94,891,508|6.82|3.120061806
+Performance counter stats for './ipTranspose -n 16384 -2tiled -s1 4 -s2 4 -noio' (5 runs):|2,071,090,850|4,077,388,220|1.97|17,827,089|16,903,312|94.818|12,224,734|34,752,497|284.28|0.627529783
+Performance counter stats for './ipTranspose -n 16384 -2tiled -s1 8 -s2 2 -noio' (5 runs):|8,328,271,524|12,876,693,253|1.55|62,121,886|59,359,924|95.554|1,310,319,629|90,629,439|6.92|2.518537124
+Performance counter stats for './ipTranspose -n 16384 -2tiled -s1 8 -s2 4 -noio' (5 runs):|6,222,452,451|9,179,033,228|1.48|62,966,891|59,755,581|94.900|617,180,323|91,995,168|14.91|1.882863343
+Performance counter stats for './ipTranspose -n 16384 -2tiled -s1 8 -s2 8 -noio' (5 runs):|2,072,435,784|4,082,478,256|1.97|17,797,044|16,935,530|95.159|12,172,008|34,800,324|285.90|0.628367689
+Performance counter stats for './ipTranspose -n 16384 -2tiled -s1 16 -s2 2 -noio' (5 runs):|7,421,282,680|12,532,053,393|1.69|128,230,411|48,645,573|37.936|1,305,186,161|173,408,572|13.29|2.245980527
+Performance counter stats for './ipTranspose -n 16384 -2tiled -s1 16 -s2 4 -noio' (5 runs):|5,648,453,007|9,001,992,176|1.59|113,620,389|49,025,633|43.149|601,111,629|154,607,470|25.72|1.709390950
+Performance counter stats for './ipTranspose -n 16384 -2tiled -s1 16 -s2 8 -noio' (5 runs):|5,643,892,315|7,337,772,381|1.30|119,737,626|49,941,900|41.709|445,130,035|164,087,708|36.86|1.708017353
+Performance counter stats for './ipTranspose -n 16384 -2tiled -s1 16 -s2 16 -noio' (5 runs):|2,070,551,816|4,084,242,886|1.97|17,833,842|16,961,289|95.107|12,209,309|34,771,191|284.79|0.627444032
+Performance counter stats for './ipTranspose -n 16384 -2tiled -s1 32 -s2 2 -noio' (5 runs):|6,900,356,844|12,408,953,677|1.80|169,656,069|40,982,263|24.156|1,310,161,107|200,931,715|15.34|2.086529214
+Performance counter stats for './ipTranspose -n 16384 -2tiled -s1 32 -s2 4 -noio' (5 runs):|5,149,954,752|8,952,745,278|1.74|118,225,191|41,419,067|35.034|602,022,360|146,129,346|24.27|1.557896101
+Performance counter stats for './ipTranspose -n 16384 -2tiled -s1 32 -s2 8 -noio' (5 runs):|5,228,740,176|7,339,207,714|1.40|115,575,472|41,570,451|35.968|455,660,657|156,191,474|34.28|1.582025353
+Performance counter stats for './ipTranspose -n 16384 -2tiled -s1 32 -s2 16 -noio' (5 runs):|6,223,948,989|6,576,315,720|1.06|155,266,852|33,395,558|21.508|400,071,898|219,937,810|54.97|1.883539386
+Performance counter stats for './ipTranspose -n 32256 -2tiled -s1 4 -s2 2 -noio' (5 runs):|40,510,027,715|53,785,316,737|1.33|298,811,777|289,575,125|96.909|5,388,666,987|364,507,188|6.76|12.248663433
+Performance counter stats for './ipTranspose -n 32256 -2tiled -s1 4 -s2 4 -noio' (5 runs):|8,007,168,638|15,809,043,936|1.97|68,977,758|65,555,479|95.039|44,752,827|134,963,932|301.58|2.423355498
+Performance counter stats for './ipTranspose -n 32256 -2tiled -s1 8 -s2 2 -noio' (5 runs):|32,077,200,480|49,908,761,606|1.56|247,932,149|240,187,602|96.876|5,075,855,649|315,345,395|6.21|9.700449681
+Performance counter stats for './ipTranspose -n 32256 -2tiled -s1 8 -s2 4 -noio' (5 runs):|21,826,188,613|35,553,382,013|1.63|253,673,124|246,210,486|97.058|2,390,576,929|321,033,924|13.43|6.602573014
+Performance counter stats for './ipTranspose -n 32256 -2tiled -s1 8 -s2 8 -noio' (5 runs):|7,998,827,370|15,815,737,129|1.98|69,069,803|65,612,473|94.994|45,396,981|134,929,377|297.22|2.419242327
+Performance counter stats for './ipTranspose -n 32256 -2tiled -s1 16 -s2 2 -noio' (5 runs):|25,188,661,602|48,584,142,843|1.93|200,128,880|193,978,577|96.927|5,053,645,810|350,591,870|6.94|7.623477622
+Performance counter stats for './ipTranspose -n 32256 -2tiled -s1 16 -s2 4 -noio' (5 runs):|18,283,466,800|34,873,065,442|1.91|199,637,837|193,895,035|97.123|2,329,097,681|312,077,095|13.40|5.528527422
+Performance counter stats for './ipTranspose -n 32256 -2tiled -s1 16 -s2 8 -noio' (5 runs):|16,093,138,375|28,420,946,655|1.77|199,754,448|194,236,550|97.238|1,722,017,948|310,629,758|18.04|4.869703223
+Performance counter stats for './ipTranspose -n 32256 -2tiled -s1 16 -s2 16 -noio' (5 runs):|8,062,180,532|15,812,922,979|1.96|69,047,050|65,466,137|94.814|45,451,610|134,934,474|296.88|2.439090329
+Performance counter stats for './ipTranspose -n 32256 -2tiled -s1 32 -s2 2 -noio' (5 runs):|23,598,614,170|48,079,960,821|2.04|164,302,708|158,739,208|96.614|5,076,587,005|559,416,127|11.02|7.138425926
+Performance counter stats for './ipTranspose -n 32256 -2tiled -s1 32 -s2 4 -noio' (5 runs):|17,319,751,657|34,693,690,581|2.00|166,319,743|161,337,068|97.004|2,331,128,582|500,133,702|21.45|5.238782712
+Performance counter stats for './ipTranspose -n 32256 -2tiled -s1 32 -s2 8 -noio' (5 runs):|15,310,948,956|28,436,038,177|1.86|164,611,021|159,812,600|97.085|1,763,369,466|437,499,594|24.81|4.632035960
+Performance counter stats for './ipTranspose -n 32256 -2tiled -s1 32 -s2 16 -noio' (5 runs):|15,263,687,819|25,463,723,836|1.67|167,284,545|162,308,902|97.026|1,546,967,803|465,031,324|30.06|4.623297019
+Performance counter stats for './ipTranspose -n 512 -cacheob -noio' (5 runs):|4,774,040|7,803,925|1.63|60,377|9,341|15.470|1,625,210|136,666|8.41|0.002524025
+Performance counter stats for './ipTranspose -n 1024 -cacheob -noio' (5 runs):|25,081,350|45,920,670|1.83|329,224|28,659|8.705|5,178,038|678,060|13.09|0.008316453
+Performance counter stats for './ipTranspose -n 4096 -cacheob -noio' (5 runs):|443,844,726|733,188,888|1.65|7,068,096|2,488,933|35.214|85,089,005|12,532,246|14.73|0.135546657
+Performance counter stats for './ipTranspose -n 8192 -cacheob -noio' (5 runs):|1,923,457,959|2,938,018,820|1.53|37,438,164|12,367,239|33.034|351,244,943|53,045,283|15.10|0.582422504
+Performance counter stats for './ipTranspose -n 16384 -cacheob -noio' (5 runs):|8,781,093,834|11,962,346,149|1.36|146,938,640|63,468,094|43.194|1,422,583,837|213,823,200|15.03|2.655187862
+Performance counter stats for './ipTranspose -n 32256 -cacheob -noio' (5 runs):|13,136,847,032|17,955,147,155|1.37|184,308,258|96,850,651|52.548|696,137,282|308,510,022|44.32|70.384234563
