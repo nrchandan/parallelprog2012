@@ -10,7 +10,7 @@
  * Matrix assumed to be square i.e n x n.
  *
  * Compile command:
- * icc transposeIP.c -lmkl_core -lmkl_intel_lp64 -lmkl_sequential
+ * icc transposeIP.c -fopenmp -lmkl_core -lmkl_intel_lp64 -lmkl_sequential
  *
  */
 
@@ -30,6 +30,9 @@ float* loadMatrix(char *infile, int length);
 
 // matrix can be a sub-matrix (sxs) of another matrix (nxn).
 void transpose(float *matrix, int size_s, int dimension_n);
+
+// basic transpose parallelized using OpenMP
+void transposeMPI(float *matrix, int size_s, int dimension_n);
 
 // Intel MKL BLAS optimized transpose.
 void transposeBLAS(float *matrix, int dimension_n);
@@ -76,7 +79,7 @@ float* M(float *matrix, int dimension, int i, int j);
 int main(int argc, char *argv[])
 {
     float* m;
-    const char *usage = "Usage: transposeIP -(basic|1tiled|2tiled|cacheob|mkl) [[-i <infile>] -n <dimension>] [-s1 tilesize] [-s2 tilesize] [-o <outfile>] [-noIO] [-noinit]\n";
+    const char *usage = "Usage: transposeIP -(basic|1tiled|2tiled|cacheob|mkl|openmp) [[-i <infile>] -n <dimension>] [-s1 tilesize] [-s2 tilesize] [-o <outfile>] [-noIO] [-noinit]\n";
     char *infile=NULL, *outfile=NULL, mode='b';
     int dimension=0, tile1size=0, tile2size=0;
     int i, noio=0, noinit=0;
@@ -103,8 +106,9 @@ int main(int argc, char *argv[])
                    !strcmp("-1tiled", argv[i])  ||
                    !strcmp("-2tiled", argv[i])  ||
                    !strcmp("-cacheob", argv[i]) ||
+                   !strcmp("-openmp", argv[i])  ||
                    !strcmp("-mkl", argv[i])) {
-            mode=argv[i][1]; //mode = 'b', '1', '2', 'c' or 'm'
+            mode=argv[i][1]; //mode = 'b', '1', '2', 'c', 'o' or 'm'
         } else if (!strcmp("-noIO", argv[i]) || !strcmp("-noio", argv[i])) {
             noio=1;
         } else if (!strcmp("-noinit", argv[i])) {
@@ -137,6 +141,9 @@ int main(int argc, char *argv[])
     switch (mode) {
         case 'b':
             transpose(m, dimension, dimension);
+            break;
+        case 'o':
+            transposeMPI(m, dimension, dimension);
             break;
         case '1':
             if (tile1size == 0) {
@@ -195,6 +202,20 @@ void transpose(float *m, int s, int n)
     }
 }
 
+void transposeMPI(float *m, int s, int n)
+{
+    int i, j, temp;
+   
+    #pragma omp parallel for 
+    for (i=0; i<s; i++) {
+        for (j=i+1; j<s; j++) {
+            temp = *M(m,n,i,j);
+            *M(m,n,i,j)=*M(m,n,j,i);
+            *M(m,n,j,i)=temp;
+        } 
+    }
+
+}
 
 float* M(float*m, int N, int i, int j)
 {
