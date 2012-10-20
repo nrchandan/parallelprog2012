@@ -59,10 +59,6 @@ int main(int argc, char *argv[])
             outfile = argv[++i];
         } else if (!strcmp("-n", argv[i])) {
             sscanf(argv[++i], "%d", &dimension);
-        } else if (!strcmp("-s1", argv[i])) {
-            sscanf(argv[++i], "%d", &tile1size);
-        } else if (!strcmp("-s2", argv[i])) {
-            sscanf(argv[++i], "%d", &tile2size);
         } else if (!strcmp("-noIO", argv[i]) || !strcmp("-noio", argv[i])) {
             noio=1;
         } else if (!strcmp("-noinit", argv[i])) {
