@@ -44,7 +44,7 @@ int *A(int *matrix, int dimension, int i, int j);
 int main(int argc, char *argv[])
 {
     int *a, *b;
-    const char *usage = "Usage: basictransposeOP [[-i <infile>] -m <row> -n <column>] [-s1 tilesize] [-s2 tilesize] [-o <outfile>] [-noIO] [-noinit]\n";
+    const char *usage = "Usage: basictransposeOP [[-i <infile>] -m <row> -n <column>] [-o <outfile>] [-noIO] [-noinit]\n";
     char *infile=NULL, *outfile=NULL;
     int row=0, column=0, tile1size=0, tile2size=0;
     int i, noio=0, noinit=0;;
@@ -65,10 +65,6 @@ int main(int argc, char *argv[])
             sscanf(argv[++i], "%d", &row);
         } else if (!strcmp("-n", argv[i])) {
             sscanf(argv[++i], "%d", &column);
-        } else if (!strcmp("-s1", argv[i])) {
-            sscanf(argv[++i], "%d", &tile1size);
-        } else if (!strcmp("-s2", argv[i])) {
-            sscanf(argv[++i], "%d", &tile2size);
         } else if (!strcmp("-noIO", argv[i]) || !strcmp("-noio", argv[i])) {
             noio=1;
         } else if (!strcmp("-noinit", argv[i])) {
