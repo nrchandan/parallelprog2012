@@ -1,0 +1,228 @@
+NAS Parallel Benchmarks
+cg - W 
+Size:        7000
+Iterations:                     15
+Number of available threads:     4
+
+default num_threads = 4
+
+ Initialization Time = 0.123 sec
+ CG Benchmark Completed.
+ Class           =                        W
+ Size            =                     7000
+ Iterations      =                       15
+ Time in seconds =                     0.69
+ Total threads   =                        4
+ Avail threads   =                        4
+ Mop/s total     =                   609.68
+ Mop/s/thread    =                   152.42
+ Operation type  =           floating point
+ Verification    =               SUCCESSFUL
+ Version         =                    3.3.1
+ Compile date    =              21 Oct 2012
+
+vary number of threads
+ Initialization Time = 0.121 sec
+ CG Benchmark Completed.
+ Class           =                        W
+ Size            =                     7000
+ Iterations      =                       15
+ Time in seconds =                     0.47
+ Total threads   =                        3
+ Avail threads   =                        3
+ Mop/s total     =                   897.89
+ Mop/s/thread    =                   299.30
+ Operation type  =           floating point
+ Verification    =               SUCCESSFUL
+ Version         =                    3.3.1
+ Compile date    =              21 Oct 2012
+
+
+ Initialization Time = 0.118 sec
+ CG Benchmark Completed.
+ Class           =                        W
+ Size            =                     7000
+ Iterations      =                       15
+ Time in seconds =                     0.53
+ Total threads   =                        2
+ Avail threads   =                        2
+ Mop/s total     =                   786.42
+ Mop/s/thread    =                   393.21
+ Operation type  =           floating point
+ Verification    =               SUCCESSFUL
+ Version         =                    3.3.1
+ Compile date    =              21 Oct 2012
+
+ CG Benchmark Completed.
+ Class           =                        W
+ Size            =                     7000
+ Iterations      =                       15
+ Time in seconds =                     0.66
+ Total threads   =                        1
+ Avail threads   =                        1
+ Mop/s total     =                   633.12
+ Mop/s/thread    =                   633.12
+ Operation type  =           floating point
+ Verification    =               SUCCESSFUL
+ Version         =                    3.3.1
+ Compile date    =              21 Oct 2012
+
+Note : 
+
+CG - class C
+
+Size:      150000
+Iterations:                     75
+Number of available threads:     4
+
+Initialization time =          36.660 seconds
+
+ Class           =                        C
+ Size            =                   150000
+ Iterations      =                       75
+ Time in seconds =                   804.00
+ Total threads   =                        1
+ Avail threads   =                        1
+ Mop/s total     =                   178.29
+ Mop/s/thread    =                   178.29
+ Operation type  =           floating point
+ Verification    =               SUCCESSFUL
+ Version         =                    3.3.1
+ Compile date    =              21 Oct 2012
+
+
+Initialization time =          15.472 seconds
+ CG Benchmark Completed.
+ Class           =                        C
+ Size            =                   150000
+ Iterations      =                       75
+ Time in seconds =                   197.46
+ Total threads   =                        2
+ Avail threads   =                        2
+ Mop/s total     =                   725.95
+ Mop/s/thread    =                   362.98
+ Operation type  =           floating point
+ Verification    =               SUCCESSFUL
+ Version         =                    3.3.1
+ Compile date    =              21 Oct 2012
+
+ Initialization time =          15.323 seconds
+ Class           =                        C
+ Size            =                   150000
+ Iterations      =                       75
+ Time in seconds =                   196.07
+ Total threads   =                        2
+ Avail threads   =                        3
+ Warning: Threads used differ from threads available
+ Mop/s total     =                   731.09
+ Mop/s/thread    =                   365.55
+ Operation type  =           floating point
+ Verification    =               SUCCESSFUL
+ Version         =                    3.3.1
+ Compile date    =              21 Oct 2012
+
+
+ Initialization time =          13.236 seconds
+ CG Benchmark Completed.
+ Class           =                        C
+ Size            =                   150000
+ Iterations      =                       75
+ Time in seconds =                   192.25
+ Total threads   =                        4
+ Avail threads   =                        4
+ Mop/s total     =                   745.64
+ Mop/s/thread    =                   186.41
+ Operation type  =           floating point
+ Verification    =               SUCCESSFUL
+ Version         =                    3.3.1
+ Compile date    =              21 Oct 2012
+
+
+
+
+ CG - class C
+ Size:       14000
+ Iterations:                     15
+ Number of available threads:     4
+
+ Initialization time =           0.997 seconds
+ CG Benchmark Completed.
+ Class           =                        A
+ Size            =                    14000
+ Iterations      =                       15
+ Time in seconds =                     3.31
+ Total threads   =                        1
+ Avail threads   =                        1
+ Mop/s total     =                   451.51
+ Mop/s/thread    =                   451.51
+ Operation type  =           floating point
+ Verification    =               SUCCESSFUL
+ Version         =                    3.3.1
+ Compile date    =              21 Oct 2012
+
+
+ Initialization time =           0.529 seconds
+ CG Benchmark Completed.
+ Class           =                        A
+ Size            =                    14000
+ Iterations      =                       15
+ Time in seconds =                     1.59
+ Total threads   =                        2
+ Avail threads   =                        2
+ Mop/s total     =                   941.48
+ Mop/s/thread    =                   470.74
+ Operation type  =           floating point
+ Verification    =               SUCCESSFUL
+ Version         =                    3.3.1
+ Compile date    =              21 Oct 2012
+
+
+ Initialization time =           0.556 seconds
+ CG Benchmark Completed.
+ Class           =                        A
+ Size            =                    14000
+ Iterations      =                       15
+ Time in seconds =                     1.59
+ Total threads   =                        3
+ Avail threads   =                        3
+ Mop/s total     =                   939.48
+ Mop/s/thread    =                   313.16
+ Operation type  =           floating point
+ Verification    =               SUCCESSFUL
+ Version         =                    3.3.1
+ Compile date    =              21 Oct 2012
+
+
+
+Initialization time =           0.445 seconds
+ CG Benchmark Completed.
+ Class           =                        A
+ Size            =                    14000
+ Iterations      =                       15
+ Time in seconds =                     1.56
+ Total threads   =                        4
+ Avail threads   =                        4
+ Mop/s total     =                   960.07
+ Mop/s/thread    =                   240.02
+ Operation type  =           floating point
+ Verification    =               SUCCESSFUL
+ Version         =                    3.3.1
+ Compile date    =              21 Oct 2012
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,211 @@
+ NAS Parallel Benchmarks (NPB3.3-OMP-C) - FT Benchmark
+
+ Size                :  128x 128x  32
+ Iterations                  :      6
+ Number of available threads :      3
+ 
+
+FT Benchmark Completed.
+ Class           =                        W
+ Size            =            128x 128x  32
+ Iterations      =                        6
+ Time in seconds =                     0.49
+ Total threads   =                        1
+ Avail threads   =                        1
+ Mop/s total     =                   765.73
+ Mop/s/thread    =                   765.73
+ Operation type  =           floating point
+ Verification    =               SUCCESSFUL
+ Version         =                    3.3.1
+ Compile date    =              21 Oct 2012
+
+
+ FT Benchmark Completed.
+ Class           =                        W
+ Size            =            128x 128x  32
+ Iterations      =                        6
+ Time in seconds =                     0.31
+ Total threads   =                        4
+ Avail threads   =                        4
+ Mop/s total     =                  1197.31
+ Mop/s/thread    =                   299.33
+ Operation type  =           floating point
+ Verification    =               SUCCESSFUL
+ Version         =                    3.3.1
+ Compile date    =              21 Oct 2012
+
+FT Benchmark Completed.
+ Class           =                        W
+ Size            =            128x 128x  32
+ Iterations      =                        6
+ Time in seconds =                     0.30
+ Total threads   =                        2
+ Avail threads   =                        2
+ Mop/s total     =                  1240.04
+ Mop/s/thread    =                   620.02
+ Operation type  =           floating point
+ Verification    =               SUCCESSFUL
+ Version         =                    3.3.1
+ Compile date    =              21 Oct 2012
+
+ FT Benchmark Completed.
+ Class           =                        W
+ Size            =            128x 128x  32
+ Iterations      =                        6
+ Time in seconds =                     0.29
+ Total threads   =                        3
+ Avail threads   =                        3
+ Mop/s total     =                  1299.12
+ Mop/s/thread    =                   433.04
+ Operation type  =           floating point
+ Verification    =               SUCCESSFUL
+ Version         =                    3.3.1
+ Compile date    =              21 Oct 2012
+
+----------------------------------------------------------------------------------------
+
+ NAS Parallel Benchmarks (NPB3.3-OMP-C) - FT Benchmark
+
+ Size                :  256x 256x 128
+ Iterations                  :      6
+
+ FT Benchmark Completed.
+ Class           =                        A
+ Size            =            256x 256x 128
+ Iterations      =                        6
+ Time in seconds =                     8.04
+ Total threads   =                        1
+ Avail threads   =                        1
+ Mop/s total     =                   887.87
+ Mop/s/thread    =                   887.87
+ Operation type  =           floating point
+ Verification    =               SUCCESSFUL
+ Version         =                    3.3.1
+ Compile date    =              21 Oct 2012
+
+FT Benchmark Completed.
+ Class           =                        A
+ Size            =            256x 256x 128
+ Iterations      =                        6
+ Time in seconds =                     4.35
+ Total threads   =                        2
+ Avail threads   =                        2
+ Mop/s total     =                  1640.40
+ Mop/s/thread    =                   820.20
+ Operation type  =           floating point
+ Verification    =               SUCCESSFUL
+ Version         =                    3.3.1
+ Compile date    =              21 Oct 2012
+
+ FT Benchmark Completed.
+ Class           =                        A
+ Size            =            256x 256x 128
+ Iterations      =                        6
+ Time in seconds =                     4.70
+ Total threads   =                        3
+ Avail threads   =                        3
+ Mop/s total     =                  1519.47
+ Mop/s/thread    =                   506.49
+ Operation type  =           floating point
+ Verification    =               SUCCESSFUL
+ Version         =                    3.3.1
+ Compile date    =              21 Oct 2012
+
+ 
+
+ FT Benchmark Completed.
+ Class           =                        A
+ Size            =            256x 256x 128
+ Iterations      =                        6
+ Time in seconds =                     3.80
+ Total threads   =                        4
+ Avail threads   =                        4
+ Mop/s total     =                  1876.34
+ Mop/s/thread    =                   469.09
+ Operation type  =           floating point
+ Verification    =               SUCCESSFUL
+ Version         =                    3.3.1
+ Compile date    =              21 Oct 2012
+
+-----------------------------------------------------------------------------------
+ NAS Parallel Benchmarks (NPB3.3-OMP-C) - FT Benchmark
+
+ Size                :  512x 256x 256
+ Iterations                  :     20
+ Number of available threads :      1
+
+
+ FT Benchmark Completed.
+ Class           =                        B
+ Size            =            512x 256x 256
+ Iterations      =                       20
+ Time in seconds =                    92.59
+ Total threads   =                        1
+ Avail threads   =                        1
+ Mop/s total     =                   994.17
+ Mop/s/thread    =                   994.17
+ Operation type  =           floating point
+ Verification    =               SUCCESSFUL
+ Version         =                    3.3.1
+ Compile date    =              21 Oct 2012
+
+
+ FT Benchmark Completed.
+ Class           =                        B
+ Size            =            512x 256x 256
+ Iterations      =                       20
+ Time in seconds =                    50.50
+ Total threads   =                        2
+ Avail threads   =                        2
+ Mop/s total     =                  1822.84
+ Mop/s/thread    =                   911.42
+ Operation type  =           floating point
+ Verification    =               SUCCESSFUL
+ Version         =                    3.3.1
+ Compile date    =              21 Oct 2012
+
+
+ FT Benchmark Completed.
+ Class           =                        B
+ Size            =            512x 256x 256
+ Iterations      =                       20
+ Time in seconds =                    53.92
+ Total threads   =                        3
+ Avail threads   =                        3
+ Mop/s total     =                  1707.33
+ Mop/s/thread    =                   569.11
+ Operation type  =           floating point
+ Verification    =               SUCCESSFUL
+ Version         =                    3.3.1
+ Compile date    =              21 Oct 2012
+
+ FT Benchmark Completed.
+ Class           =                        B
+ Size            =            512x 256x 256
+ Iterations      =                       20
+ Time in seconds =                    49.41
+ Total threads   =                        4
+ Avail threads   =                        4
+ Mop/s total     =                  1863.03
+ Mop/s/thread    =                   465.76
+ Operation type  =           floating point
+ Verification    =               SUCCESSFUL
+ Version         =                    3.3.1
+ Compile date    =              21 Oct 2012
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

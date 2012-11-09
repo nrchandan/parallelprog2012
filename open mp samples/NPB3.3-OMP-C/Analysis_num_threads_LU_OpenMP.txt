@@ -1,0 +1,128 @@
+ NAS Parallel Benchmarks (NPB3.3-OMP-C) - LU Benchmark
+
+ Size:   33x  33x  33
+ Iterations:                    300
+
+ LU Benchmark Completed.
+ Class           =                        W
+ Size            =             33x  33x  33
+ Iterations      =                      300
+ Time in seconds =                    10.43
+ Total threads   =                        1
+ Avail threads   =                        1
+ Mop/s total     =                  1732.03
+ Mop/s/thread    =                  1732.03
+ Operation type  =           floating point
+ Verification    =               SUCCESSFUL
+ Version         =                    3.3.1
+ Compile date    =              21 Oct 2012
+
+
+ LU Benchmark Completed.
+ Class           =                        W
+ Size            =             33x  33x  33
+ Iterations      =                      300
+ Time in seconds =                     5.73
+ Total threads   =                        2
+ Avail threads   =                        2
+ Mop/s total     =                  3151.22
+ Mop/s/thread    =                  1575.61
+ Operation type  =           floating point
+ Verification    =               SUCCESSFUL
+ Version         =                    3.3.1
+ Compile date    =              21 Oct 2012
+
+ LU Benchmark Completed.
+ Class           =                        W
+ Size            =             33x  33x  33
+ Iterations      =                      300
+ Time in seconds =                    10.31
+ Total threads   =                        3
+ Avail threads   =                        3
+ Mop/s total     =                  1751.29
+ Mop/s/thread    =                   583.76
+ Operation type  =           floating point
+ Verification    =               SUCCESSFUL
+ Version         =                    3.3.1
+ Compile date    =              21 Oct 2012
+
+
+ LU Benchmark Completed.
+ Class           =                        W
+ Size            =             33x  33x  33
+ Iterations      =                      300
+ Time in seconds =                    13.28
+ Total threads   =                        4
+ Avail threads   =                        4
+ Mop/s total     =                  1360.11
+ Mop/s/thread    =                   340.03
+ Operation type  =           floating point
+ Verification    =               SUCCESSFUL
+ Version         =                    3.3.1
+ Compile date    =              21 Oct 2012
+
+-------------------------------------------------------------------------------------------------
+
+ NAS Parallel Benchmarks (NPB3.3-OMP-C) - LU Benchmark
+
+ Size:   64x  64x  64
+ Iterations:                    250
+
+  LU Benchmark Completed.
+ Class           =                        A
+ Size            =             64x  64x  64
+ Iterations      =                      250
+ Time in seconds =                    77.51
+ Total threads   =                        1
+ Avail threads   =                        1
+ Mop/s total     =                  1539.12
+ Mop/s/thread    =                  1539.12
+ Operation type  =           floating point
+ Verification    =               SUCCESSFUL
+ Version         =                    3.3.1
+ Compile date    =              21 Oct 2012
+
+
+ LU Benchmark Completed.
+ Class           =                        A
+ Size            =             64x  64x  64
+ Iterations      =                      250
+ Time in seconds =                    43.65
+ Total threads   =                        2
+ Avail threads   =                        2
+ Mop/s total     =                  2733.29
+ Mop/s/thread    =                  1366.64
+ Operation type  =           floating point
+ Verification    =               SUCCESSFUL
+ Version         =                    3.3.1
+ Compile date    =              21 Oct 2012
+
+
+ LU Benchmark Completed.
+ Class           =                        A
+ Size            =             64x  64x  64
+ Iterations      =                      250
+ Time in seconds =                    57.43
+ Total threads   =                        4
+ Avail threads   =                        4
+ Mop/s total     =                  2077.31
+ Mop/s/thread    =                   519.33
+ Operation type  =           floating point
+ Verification    =               SUCCESSFUL
+ Version         =                    3.3.1
+ Compile date    =              21 Oct 2012
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
