@@ -1,0 +1,84 @@
+10 November 2012 05:04:48 PM
+
+MXV_OPENMP:
+  C/OpenMP version
+  Compute matrix vector products y = A*x.
+
+  Number of processors available = 4
+  Number of threads =              1
+
+  Compare various algorithms:
+
+  MXV_PLAIN          - plain MxV coding.
+  MXV_PLAIN_OPENMP  - plain MxV coding + OpenMP.
+
+  Algorithm                  M         N      Seconds
+  MXV_PLAIN_OPENMP      10000     10000        6.891271
+
+MXV_OPENMP:
+  Normal end of execution.
+
+10 November 2012 05:05:02 PM
+10 November 2012 05:05:17 PM
+
+MXV_OPENMP:
+  C/OpenMP version
+  Compute matrix vector products y = A*x.
+
+  Number of processors available = 4
+  Number of threads =              2
+
+  Compare various algorithms:
+
+  MXV_PLAIN          - plain MxV coding.
+  MXV_PLAIN_OPENMP  - plain MxV coding + OpenMP.
+
+  Algorithm                  M         N      Seconds
+  MXV_PLAIN_OPENMP      10000     10000        2.453564
+
+MXV_OPENMP:
+  Normal end of execution.
+
+10 November 2012 05:05:21 PM
+10 November 2012 05:05:21 PM
+
+MXV_OPENMP:
+  C/OpenMP version
+  Compute matrix vector products y = A*x.
+
+  Number of processors available = 4
+  Number of threads =              4
+
+  Compare various algorithms:
+
+  MXV_PLAIN          - plain MxV coding.
+  MXV_PLAIN_OPENMP  - plain MxV coding + OpenMP.
+
+  Algorithm                  M         N      Seconds
+  MXV_PLAIN_OPENMP      10000     10000        1.973714
+
+MXV_OPENMP:
+  Normal end of execution.
+
+10 November 2012 05:05:24 PM
+10 November 2012 05:05:25 PM
+
+MXV_OPENMP:
+  C/OpenMP version
+  Compute matrix vector products y = A*x.
+
+  Number of processors available = 4
+  Number of threads =              8
+
+  Compare various algorithms:
+
+  MXV_PLAIN          - plain MxV coding.
+  MXV_PLAIN_OPENMP  - plain MxV coding + OpenMP.
+
+  Algorithm                  M         N      Seconds
+  MXV_PLAIN_OPENMP      10000     10000        1.891360
+
+MXV_OPENMP:
+  Normal end of execution.
+
+10 November 2012 05:05:28 PM
