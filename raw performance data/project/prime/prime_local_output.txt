@@ -1,0 +1,112 @@
+
+PRIME_OPENMP
+  C/OpenMP version
+
+  Number of processors available = 16
+  Number of threads =              12
+
+TEST01
+  Call PRIME_NUMBER to count the primes from 1 to N.
+
+         N        Pi          Time
+
+    500000     41538        8.724997
+
+PRIME_OPENMP
+  Normal end of execution.
+
+PRIME_OPENMP
+  C/OpenMP version
+
+  Number of processors available = 16
+  Number of threads =              13
+
+TEST01
+  Call PRIME_NUMBER to count the primes from 1 to N.
+
+         N        Pi          Time
+
+    500000     41538        7.919213
+
+PRIME_OPENMP
+  Normal end of execution.
+
+PRIME_OPENMP
+  C/OpenMP version
+
+  Number of processors available = 16
+  Number of threads =              14
+
+TEST01
+  Call PRIME_NUMBER to count the primes from 1 to N.
+
+         N        Pi          Time
+
+    500000     41538        8.317399
+
+PRIME_OPENMP
+  Normal end of execution.
+
+PRIME_OPENMP
+  C/OpenMP version
+
+  Number of processors available = 16
+  Number of threads =              15
+
+TEST01
+  Call PRIME_NUMBER to count the primes from 1 to N.
+
+         N        Pi          Time
+
+    500000     41538        9.668475
+
+PRIME_OPENMP
+  Normal end of execution.
+
+PRIME_OPENMP
+  C/OpenMP version
+
+  Number of processors available = 16
+  Number of threads =              16
+
+TEST01
+  Call PRIME_NUMBER to count the primes from 1 to N.
+
+         N        Pi          Time
+
+    500000     41538        8.289156
+
+PRIME_OPENMP
+  Normal end of execution.
+
+PRIME_OPENMP
+  C/OpenMP version
+
+  Number of processors available = 16
+  Number of threads =              17
+
+TEST01
+  Call PRIME_NUMBER to count the primes from 1 to N.
+
+         N        Pi          Time
+
+    500000     41538        8.405339
+
+PRIME_OPENMP
+  Normal end of execution.
+
+PRIME_OPENMP
+  C/OpenMP version
+
+  Number of processors available = 16
+  Number of threads =              18
+
+TEST01
+  Call PRIME_NUMBER to count the primes from 1 to N.
+
+         N        Pi          Time
+
+    500000     41538        7.496817
+
+PRIME_OPENMP
+  Normal end of execution.

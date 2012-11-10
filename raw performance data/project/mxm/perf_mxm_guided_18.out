@@ -1,0 +1,990 @@
+
+MXM
+  C/OpenMP version.
+
+  Matrix multiplication tests.
+
+  Number of processors available = 16
+  Number of threads =              18
+  Scheduling Policy =              Static
+  Chunk Size =                     1
+
+R8_MXM matrix multiplication timing.
+  A(LxN) = B(LxM) * C(MxN).
+  L = 2000
+  M = 2000
+  N = 2000
+  Floating point OPS roughly -1179869184
+  Elapsed time dT = 17.619665
+  Rate = MegaOPS/dT = -66.963202
+
+MXM:
+  Normal end of execution.
+
+MXM
+  C/OpenMP version.
+
+  Matrix multiplication tests.
+
+  Number of processors available = 16
+  Number of threads =              18
+  Scheduling Policy =              Static
+  Chunk Size =                     1
+
+R8_MXM matrix multiplication timing.
+  A(LxN) = B(LxM) * C(MxN).
+  L = 2000
+  M = 2000
+  N = 2000
+  Floating point OPS roughly -1179869184
+  Elapsed time dT = 16.738406
+  Rate = MegaOPS/dT = -70.488742
+
+MXM:
+  Normal end of execution.
+
+MXM
+  C/OpenMP version.
+
+  Matrix multiplication tests.
+
+  Number of processors available = 16
+  Number of threads =              18
+  Scheduling Policy =              Static
+  Chunk Size =                     1
+
+R8_MXM matrix multiplication timing.
+  A(LxN) = B(LxM) * C(MxN).
+  L = 2000
+  M = 2000
+  N = 2000
+  Floating point OPS roughly -1179869184
+  Elapsed time dT = 17.462155
+  Rate = MegaOPS/dT = -67.567214
+
+MXM:
+  Normal end of execution.
+
+MXM
+  C/OpenMP version.
+
+  Matrix multiplication tests.
+
+  Number of processors available = 16
+  Number of threads =              18
+  Scheduling Policy =              Static
+  Chunk Size =                     1
+
+R8_MXM matrix multiplication timing.
+  A(LxN) = B(LxM) * C(MxN).
+  L = 2000
+  M = 2000
+  N = 2000
+  Floating point OPS roughly -1179869184
+  Elapsed time dT = 15.840963
+  Rate = MegaOPS/dT = -74.482164
+
+MXM:
+  Normal end of execution.
+
+MXM
+  C/OpenMP version.
+
+  Matrix multiplication tests.
+
+  Number of processors available = 16
+  Number of threads =              18
+  Scheduling Policy =              Static
+  Chunk Size =                     1
+
+R8_MXM matrix multiplication timing.
+  A(LxN) = B(LxM) * C(MxN).
+  L = 2000
+  M = 2000
+  N = 2000
+  Floating point OPS roughly -1179869184
+  Elapsed time dT = 17.567169
+  Rate = MegaOPS/dT = -67.163308
+
+MXM:
+  Normal end of execution.
+
+MXM
+  C/OpenMP version.
+
+  Matrix multiplication tests.
+
+  Number of processors available = 16
+  Number of threads =              18
+  Scheduling Policy =              Static
+  Chunk Size =                     2
+
+R8_MXM matrix multiplication timing.
+  A(LxN) = B(LxM) * C(MxN).
+  L = 2000
+  M = 2000
+  N = 2000
+  Floating point OPS roughly -1179869184
+  Elapsed time dT = 15.740828
+  Rate = MegaOPS/dT = -74.955982
+
+MXM:
+  Normal end of execution.
+
+MXM
+  C/OpenMP version.
+
+  Matrix multiplication tests.
+
+  Number of processors available = 16
+  Number of threads =              18
+  Scheduling Policy =              Static
+  Chunk Size =                     2
+
+R8_MXM matrix multiplication timing.
+  A(LxN) = B(LxM) * C(MxN).
+  L = 2000
+  M = 2000
+  N = 2000
+  Floating point OPS roughly -1179869184
+  Elapsed time dT = 16.525205
+  Rate = MegaOPS/dT = -71.398156
+
+MXM:
+  Normal end of execution.
+
+MXM
+  C/OpenMP version.
+
+  Matrix multiplication tests.
+
+  Number of processors available = 16
+  Number of threads =              18
+  Scheduling Policy =              Static
+  Chunk Size =                     2
+
+R8_MXM matrix multiplication timing.
+  A(LxN) = B(LxM) * C(MxN).
+  L = 2000
+  M = 2000
+  N = 2000
+  Floating point OPS roughly -1179869184
+  Elapsed time dT = 17.067555
+  Rate = MegaOPS/dT = -69.129361
+
+MXM:
+  Normal end of execution.
+
+MXM
+  C/OpenMP version.
+
+  Matrix multiplication tests.
+
+  Number of processors available = 16
+  Number of threads =              18
+  Scheduling Policy =              Static
+  Chunk Size =                     2
+
+R8_MXM matrix multiplication timing.
+  A(LxN) = B(LxM) * C(MxN).
+  L = 2000
+  M = 2000
+  N = 2000
+  Floating point OPS roughly -1179869184
+  Elapsed time dT = 17.390606
+  Rate = MegaOPS/dT = -67.845204
+
+MXM:
+  Normal end of execution.
+
+MXM
+  C/OpenMP version.
+
+  Matrix multiplication tests.
+
+  Number of processors available = 16
+  Number of threads =              18
+  Scheduling Policy =              Static
+  Chunk Size =                     2
+
+R8_MXM matrix multiplication timing.
+  A(LxN) = B(LxM) * C(MxN).
+  L = 2000
+  M = 2000
+  N = 2000
+  Floating point OPS roughly -1179869184
+  Elapsed time dT = 17.300197
+  Rate = MegaOPS/dT = -68.199754
+
+MXM:
+  Normal end of execution.
+
+MXM
+  C/OpenMP version.
+
+  Matrix multiplication tests.
+
+  Number of processors available = 16
+  Number of threads =              18
+  Scheduling Policy =              Static
+  Chunk Size =                     3
+
+R8_MXM matrix multiplication timing.
+  A(LxN) = B(LxM) * C(MxN).
+  L = 2000
+  M = 2000
+  N = 2000
+  Floating point OPS roughly -1179869184
+  Elapsed time dT = 15.441807
+  Rate = MegaOPS/dT = -76.407455
+
+MXM:
+  Normal end of execution.
+
+MXM
+  C/OpenMP version.
+
+  Matrix multiplication tests.
+
+  Number of processors available = 16
+  Number of threads =              18
+  Scheduling Policy =              Static
+  Chunk Size =                     3
+
+R8_MXM matrix multiplication timing.
+  A(LxN) = B(LxM) * C(MxN).
+  L = 2000
+  M = 2000
+  N = 2000
+  Floating point OPS roughly -1179869184
+  Elapsed time dT = 16.655378
+  Rate = MegaOPS/dT = -70.840130
+
+MXM:
+  Normal end of execution.
+
+MXM
+  C/OpenMP version.
+
+  Matrix multiplication tests.
+
+  Number of processors available = 16
+  Number of threads =              18
+  Scheduling Policy =              Static
+  Chunk Size =                     3
+
+R8_MXM matrix multiplication timing.
+  A(LxN) = B(LxM) * C(MxN).
+  L = 2000
+  M = 2000
+  N = 2000
+  Floating point OPS roughly -1179869184
+  Elapsed time dT = 17.446365
+  Rate = MegaOPS/dT = -67.628367
+
+MXM:
+  Normal end of execution.
+
+MXM
+  C/OpenMP version.
+
+  Matrix multiplication tests.
+
+  Number of processors available = 16
+  Number of threads =              18
+  Scheduling Policy =              Static
+  Chunk Size =                     3
+
+R8_MXM matrix multiplication timing.
+  A(LxN) = B(LxM) * C(MxN).
+  L = 2000
+  M = 2000
+  N = 2000
+  Floating point OPS roughly -1179869184
+  Elapsed time dT = 18.429727
+  Rate = MegaOPS/dT = -64.019894
+
+MXM:
+  Normal end of execution.
+
+MXM
+  C/OpenMP version.
+
+  Matrix multiplication tests.
+
+  Number of processors available = 16
+  Number of threads =              18
+  Scheduling Policy =              Static
+  Chunk Size =                     3
+
+R8_MXM matrix multiplication timing.
+  A(LxN) = B(LxM) * C(MxN).
+  L = 2000
+  M = 2000
+  N = 2000
+  Floating point OPS roughly -1179869184
+  Elapsed time dT = 16.674320
+  Rate = MegaOPS/dT = -70.759657
+
+MXM:
+  Normal end of execution.
+
+MXM
+  C/OpenMP version.
+
+  Matrix multiplication tests.
+
+  Number of processors available = 16
+  Number of threads =              18
+  Scheduling Policy =              Static
+  Chunk Size =                     4
+
+R8_MXM matrix multiplication timing.
+  A(LxN) = B(LxM) * C(MxN).
+  L = 2000
+  M = 2000
+  N = 2000
+  Floating point OPS roughly -1179869184
+  Elapsed time dT = 18.182860
+  Rate = MegaOPS/dT = -64.889087
+
+MXM:
+  Normal end of execution.
+
+MXM
+  C/OpenMP version.
+
+  Matrix multiplication tests.
+
+  Number of processors available = 16
+  Number of threads =              18
+  Scheduling Policy =              Static
+  Chunk Size =                     4
+
+R8_MXM matrix multiplication timing.
+  A(LxN) = B(LxM) * C(MxN).
+  L = 2000
+  M = 2000
+  N = 2000
+  Floating point OPS roughly -1179869184
+  Elapsed time dT = 17.246626
+  Rate = MegaOPS/dT = -68.411595
+
+MXM:
+  Normal end of execution.
+
+MXM
+  C/OpenMP version.
+
+  Matrix multiplication tests.
+
+  Number of processors available = 16
+  Number of threads =              18
+  Scheduling Policy =              Static
+  Chunk Size =                     4
+
+R8_MXM matrix multiplication timing.
+  A(LxN) = B(LxM) * C(MxN).
+  L = 2000
+  M = 2000
+  N = 2000
+  Floating point OPS roughly -1179869184
+  Elapsed time dT = 17.196814
+  Rate = MegaOPS/dT = -68.609756
+
+MXM:
+  Normal end of execution.
+
+MXM
+  C/OpenMP version.
+
+  Matrix multiplication tests.
+
+  Number of processors available = 16
+  Number of threads =              18
+  Scheduling Policy =              Static
+  Chunk Size =                     4
+
+R8_MXM matrix multiplication timing.
+  A(LxN) = B(LxM) * C(MxN).
+  L = 2000
+  M = 2000
+  N = 2000
+  Floating point OPS roughly -1179869184
+  Elapsed time dT = 15.404439
+  Rate = MegaOPS/dT = -76.592805
+
+MXM:
+  Normal end of execution.
+
+MXM
+  C/OpenMP version.
+
+  Matrix multiplication tests.
+
+  Number of processors available = 16
+  Number of threads =              18
+  Scheduling Policy =              Static
+  Chunk Size =                     4
+
+R8_MXM matrix multiplication timing.
+  A(LxN) = B(LxM) * C(MxN).
+  L = 2000
+  M = 2000
+  N = 2000
+  Floating point OPS roughly -1179869184
+  Elapsed time dT = 16.133566
+  Rate = MegaOPS/dT = -73.131333
+
+MXM:
+  Normal end of execution.
+
+MXM
+  C/OpenMP version.
+
+  Matrix multiplication tests.
+
+  Number of processors available = 16
+  Number of threads =              18
+  Scheduling Policy =              Static
+  Chunk Size =                     5
+
+R8_MXM matrix multiplication timing.
+  A(LxN) = B(LxM) * C(MxN).
+  L = 2000
+  M = 2000
+  N = 2000
+  Floating point OPS roughly -1179869184
+  Elapsed time dT = 17.701136
+  Rate = MegaOPS/dT = -66.655000
+
+MXM:
+  Normal end of execution.
+
+MXM
+  C/OpenMP version.
+
+  Matrix multiplication tests.
+
+  Number of processors available = 16
+  Number of threads =              18
+  Scheduling Policy =              Static
+  Chunk Size =                     5
+
+R8_MXM matrix multiplication timing.
+  A(LxN) = B(LxM) * C(MxN).
+  L = 2000
+  M = 2000
+  N = 2000
+  Floating point OPS roughly -1179869184
+  Elapsed time dT = 17.534379
+  Rate = MegaOPS/dT = -67.288906
+
+MXM:
+  Normal end of execution.
+
+MXM
+  C/OpenMP version.
+
+  Matrix multiplication tests.
+
+  Number of processors available = 16
+  Number of threads =              18
+  Scheduling Policy =              Static
+  Chunk Size =                     5
+
+R8_MXM matrix multiplication timing.
+  A(LxN) = B(LxM) * C(MxN).
+  L = 2000
+  M = 2000
+  N = 2000
+  Floating point OPS roughly -1179869184
+  Elapsed time dT = 15.182429
+  Rate = MegaOPS/dT = -77.712805
+
+MXM:
+  Normal end of execution.
+
+MXM
+  C/OpenMP version.
+
+  Matrix multiplication tests.
+
+  Number of processors available = 16
+  Number of threads =              18
+  Scheduling Policy =              Static
+  Chunk Size =                     5
+
+R8_MXM matrix multiplication timing.
+  A(LxN) = B(LxM) * C(MxN).
+  L = 2000
+  M = 2000
+  N = 2000
+  Floating point OPS roughly -1179869184
+  Elapsed time dT = 16.118691
+  Rate = MegaOPS/dT = -73.198822
+
+MXM:
+  Normal end of execution.
+
+MXM
+  C/OpenMP version.
+
+  Matrix multiplication tests.
+
+  Number of processors available = 16
+  Number of threads =              18
+  Scheduling Policy =              Static
+  Chunk Size =                     5
+
+R8_MXM matrix multiplication timing.
+  A(LxN) = B(LxM) * C(MxN).
+  L = 2000
+  M = 2000
+  N = 2000
+  Floating point OPS roughly -1179869184
+  Elapsed time dT = 16.659057
+  Rate = MegaOPS/dT = -70.824489
+
+MXM:
+  Normal end of execution.
+
+MXM
+  C/OpenMP version.
+
+  Matrix multiplication tests.
+
+  Number of processors available = 16
+  Number of threads =              18
+  Scheduling Policy =              Static
+  Chunk Size =                     10
+
+R8_MXM matrix multiplication timing.
+  A(LxN) = B(LxM) * C(MxN).
+  L = 2000
+  M = 2000
+  N = 2000
+  Floating point OPS roughly -1179869184
+  Elapsed time dT = 17.548522
+  Rate = MegaOPS/dT = -67.234676
+
+MXM:
+  Normal end of execution.
+
+MXM
+  C/OpenMP version.
+
+  Matrix multiplication tests.
+
+  Number of processors available = 16
+  Number of threads =              18
+  Scheduling Policy =              Static
+  Chunk Size =                     10
+
+R8_MXM matrix multiplication timing.
+  A(LxN) = B(LxM) * C(MxN).
+  L = 2000
+  M = 2000
+  N = 2000
+  Floating point OPS roughly -1179869184
+  Elapsed time dT = 17.623745
+  Rate = MegaOPS/dT = -66.947700
+
+MXM:
+  Normal end of execution.
+
+MXM
+  C/OpenMP version.
+
+  Matrix multiplication tests.
+
+  Number of processors available = 16
+  Number of threads =              18
+  Scheduling Policy =              Static
+  Chunk Size =                     10
+
+R8_MXM matrix multiplication timing.
+  A(LxN) = B(LxM) * C(MxN).
+  L = 2000
+  M = 2000
+  N = 2000
+  Floating point OPS roughly -1179869184
+  Elapsed time dT = 17.578080
+  Rate = MegaOPS/dT = -67.121618
+
+MXM:
+  Normal end of execution.
+
+MXM
+  C/OpenMP version.
+
+  Matrix multiplication tests.
+
+  Number of processors available = 16
+  Number of threads =              18
+  Scheduling Policy =              Static
+  Chunk Size =                     10
+
+R8_MXM matrix multiplication timing.
+  A(LxN) = B(LxM) * C(MxN).
+  L = 2000
+  M = 2000
+  N = 2000
+  Floating point OPS roughly -1179869184
+  Elapsed time dT = 17.042976
+  Rate = MegaOPS/dT = -69.229057
+
+MXM:
+  Normal end of execution.
+
+MXM
+  C/OpenMP version.
+
+  Matrix multiplication tests.
+
+  Number of processors available = 16
+  Number of threads =              18
+  Scheduling Policy =              Static
+  Chunk Size =                     10
+
+R8_MXM matrix multiplication timing.
+  A(LxN) = B(LxM) * C(MxN).
+  L = 2000
+  M = 2000
+  N = 2000
+  Floating point OPS roughly -1179869184
+  Elapsed time dT = 16.597374
+  Rate = MegaOPS/dT = -71.087703
+
+MXM:
+  Normal end of execution.
+
+MXM
+  C/OpenMP version.
+
+  Matrix multiplication tests.
+
+  Number of processors available = 16
+  Number of threads =              18
+  Scheduling Policy =              Static
+  Chunk Size =                     20
+
+R8_MXM matrix multiplication timing.
+  A(LxN) = B(LxM) * C(MxN).
+  L = 2000
+  M = 2000
+  N = 2000
+  Floating point OPS roughly -1179869184
+  Elapsed time dT = 17.558447
+  Rate = MegaOPS/dT = -67.196669
+
+MXM:
+  Normal end of execution.
+
+MXM
+  C/OpenMP version.
+
+  Matrix multiplication tests.
+
+  Number of processors available = 16
+  Number of threads =              18
+  Scheduling Policy =              Static
+  Chunk Size =                     20
+
+R8_MXM matrix multiplication timing.
+  A(LxN) = B(LxM) * C(MxN).
+  L = 2000
+  M = 2000
+  N = 2000
+  Floating point OPS roughly -1179869184
+  Elapsed time dT = 17.426474
+  Rate = MegaOPS/dT = -67.705562
+
+MXM:
+  Normal end of execution.
+
+MXM
+  C/OpenMP version.
+
+  Matrix multiplication tests.
+
+  Number of processors available = 16
+  Number of threads =              18
+  Scheduling Policy =              Static
+  Chunk Size =                     20
+
+R8_MXM matrix multiplication timing.
+  A(LxN) = B(LxM) * C(MxN).
+  L = 2000
+  M = 2000
+  N = 2000
+  Floating point OPS roughly -1179869184
+  Elapsed time dT = 16.798730
+  Rate = MegaOPS/dT = -70.235616
+
+MXM:
+  Normal end of execution.
+
+MXM
+  C/OpenMP version.
+
+  Matrix multiplication tests.
+
+  Number of processors available = 16
+  Number of threads =              18
+  Scheduling Policy =              Static
+  Chunk Size =                     20
+
+R8_MXM matrix multiplication timing.
+  A(LxN) = B(LxM) * C(MxN).
+  L = 2000
+  M = 2000
+  N = 2000
+  Floating point OPS roughly -1179869184
+  Elapsed time dT = 15.824858
+  Rate = MegaOPS/dT = -74.557965
+
+MXM:
+  Normal end of execution.
+
+MXM
+  C/OpenMP version.
+
+  Matrix multiplication tests.
+
+  Number of processors available = 16
+  Number of threads =              18
+  Scheduling Policy =              Static
+  Chunk Size =                     20
+
+R8_MXM matrix multiplication timing.
+  A(LxN) = B(LxM) * C(MxN).
+  L = 2000
+  M = 2000
+  N = 2000
+  Floating point OPS roughly -1179869184
+  Elapsed time dT = 17.843096
+  Rate = MegaOPS/dT = -66.124689
+
+MXM:
+  Normal end of execution.
+
+MXM
+  C/OpenMP version.
+
+  Matrix multiplication tests.
+
+  Number of processors available = 16
+  Number of threads =              18
+  Scheduling Policy =              Static
+  Chunk Size =                     50
+
+R8_MXM matrix multiplication timing.
+  A(LxN) = B(LxM) * C(MxN).
+  L = 2000
+  M = 2000
+  N = 2000
+  Floating point OPS roughly -1179869184
+  Elapsed time dT = 17.456269
+  Rate = MegaOPS/dT = -67.589998
+
+MXM:
+  Normal end of execution.
+
+MXM
+  C/OpenMP version.
+
+  Matrix multiplication tests.
+
+  Number of processors available = 16
+  Number of threads =              18
+  Scheduling Policy =              Static
+  Chunk Size =                     50
+
+R8_MXM matrix multiplication timing.
+  A(LxN) = B(LxM) * C(MxN).
+  L = 2000
+  M = 2000
+  N = 2000
+  Floating point OPS roughly -1179869184
+  Elapsed time dT = 19.384235
+  Rate = MegaOPS/dT = -60.867462
+
+MXM:
+  Normal end of execution.
+
+MXM
+  C/OpenMP version.
+
+  Matrix multiplication tests.
+
+  Number of processors available = 16
+  Number of threads =              18
+  Scheduling Policy =              Static
+  Chunk Size =                     50
+
+R8_MXM matrix multiplication timing.
+  A(LxN) = B(LxM) * C(MxN).
+  L = 2000
+  M = 2000
+  N = 2000
+  Floating point OPS roughly -1179869184
+  Elapsed time dT = 17.220100
+  Rate = MegaOPS/dT = -68.516976
+
+MXM:
+  Normal end of execution.
+
+MXM
+  C/OpenMP version.
+
+  Matrix multiplication tests.
+
+  Number of processors available = 16
+  Number of threads =              18
+  Scheduling Policy =              Static
+  Chunk Size =                     50
+
+R8_MXM matrix multiplication timing.
+  A(LxN) = B(LxM) * C(MxN).
+  L = 2000
+  M = 2000
+  N = 2000
+  Floating point OPS roughly -1179869184
+  Elapsed time dT = 16.762618
+  Rate = MegaOPS/dT = -70.386927
+
+MXM:
+  Normal end of execution.
+
+MXM
+  C/OpenMP version.
+
+  Matrix multiplication tests.
+
+  Number of processors available = 16
+  Number of threads =              18
+  Scheduling Policy =              Static
+  Chunk Size =                     50
+
+R8_MXM matrix multiplication timing.
+  A(LxN) = B(LxM) * C(MxN).
+  L = 2000
+  M = 2000
+  N = 2000
+  Floating point OPS roughly -1179869184
+  Elapsed time dT = 17.593750
+  Rate = MegaOPS/dT = -67.061837
+
+MXM:
+  Normal end of execution.
+
+MXM
+  C/OpenMP version.
+
+  Matrix multiplication tests.
+
+  Number of processors available = 16
+  Number of threads =              18
+  Scheduling Policy =              Static
+  Chunk Size =                     100
+
+R8_MXM matrix multiplication timing.
+  A(LxN) = B(LxM) * C(MxN).
+  L = 2000
+  M = 2000
+  N = 2000
+  Floating point OPS roughly -1179869184
+  Elapsed time dT = 19.439812
+  Rate = MegaOPS/dT = -60.693446
+
+MXM:
+  Normal end of execution.
+
+MXM
+  C/OpenMP version.
+
+  Matrix multiplication tests.
+
+  Number of processors available = 16
+  Number of threads =              18
+  Scheduling Policy =              Static
+  Chunk Size =                     100
+
+R8_MXM matrix multiplication timing.
+  A(LxN) = B(LxM) * C(MxN).
+  L = 2000
+  M = 2000
+  N = 2000
+  Floating point OPS roughly -1179869184
+  Elapsed time dT = 18.557068
+  Rate = MegaOPS/dT = -63.580583
+
+MXM:
+  Normal end of execution.
+
+MXM
+  C/OpenMP version.
+
+  Matrix multiplication tests.
+
+  Number of processors available = 16
+  Number of threads =              18
+  Scheduling Policy =              Static
+  Chunk Size =                     100
+
+R8_MXM matrix multiplication timing.
+  A(LxN) = B(LxM) * C(MxN).
+  L = 2000
+  M = 2000
+  N = 2000
+  Floating point OPS roughly -1179869184
+  Elapsed time dT = 20.600532
+  Rate = MegaOPS/dT = -57.273725
+
+MXM:
+  Normal end of execution.
+
+MXM
+  C/OpenMP version.
+
+  Matrix multiplication tests.
+
+  Number of processors available = 16
+  Number of threads =              18
+  Scheduling Policy =              Static
+  Chunk Size =                     100
+
+R8_MXM matrix multiplication timing.
+  A(LxN) = B(LxM) * C(MxN).
+  L = 2000
+  M = 2000
+  N = 2000
+  Floating point OPS roughly -1179869184
+  Elapsed time dT = 21.543203
+  Rate = MegaOPS/dT = -54.767583
+
+MXM:
+  Normal end of execution.
+
+MXM
+  C/OpenMP version.
+
+  Matrix multiplication tests.
+
+  Number of processors available = 16
+  Number of threads =              18
+  Scheduling Policy =              Static
+  Chunk Size =                     100
+
+R8_MXM matrix multiplication timing.
+  A(LxN) = B(LxM) * C(MxN).
+  L = 2000
+  M = 2000
+  N = 2000
+  Floating point OPS roughly -1179869184
+  Elapsed time dT = 19.325829
+  Rate = MegaOPS/dT = -61.051415
+
+MXM:
+  Normal end of execution.

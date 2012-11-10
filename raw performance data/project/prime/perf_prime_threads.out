@@ -1,0 +1,80 @@
+
+PRIME_OPENMP
+  C/OpenMP version
+
+  Number of processors available = 16
+  Number of threads =              29
+
+TEST01
+  Call PRIME_NUMBER to count the primes from 1 to N.
+
+         N        Pi          Time
+
+    500000     41538        6.734042
+
+PRIME_OPENMP
+  Normal end of execution.
+
+PRIME_OPENMP
+  C/OpenMP version
+
+  Number of processors available = 16
+  Number of threads =              29
+
+TEST01
+  Call PRIME_NUMBER to count the primes from 1 to N.
+
+         N        Pi          Time
+
+    500000     41538        7.738385
+
+PRIME_OPENMP
+  Normal end of execution.
+
+PRIME_OPENMP
+  C/OpenMP version
+
+  Number of processors available = 16
+  Number of threads =              29
+
+TEST01
+  Call PRIME_NUMBER to count the primes from 1 to N.
+
+         N        Pi          Time
+
+    500000     41538        7.295489
+
+PRIME_OPENMP
+  Normal end of execution.
+
+PRIME_OPENMP
+  C/OpenMP version
+
+  Number of processors available = 16
+  Number of threads =              29
+
+TEST01
+  Call PRIME_NUMBER to count the primes from 1 to N.
+
+         N        Pi          Time
+
+    500000     41538        7.522419
+
+PRIME_OPENMP
+  Normal end of execution.
+
+PRIME_OPENMP
+  C/OpenMP version
+
+  Number of processors available = 16
+  Number of threads =              29
+
+TEST01
+  Call PRIME_NUMBER to count the primes from 1 to N.
+
+         N        Pi          Time
+
+    500000     41538        7.164771
+
+PRIME_OPENMP
+  Normal end of execution.

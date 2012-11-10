@@ -1,0 +1,39 @@
+
+DOT_PRODUCT
+  C/OpenMP version
+
+  A program which computes a vector dot product.
+
+  Number of processors available = 16
+  Number of threads =              1
+
+  Parallel    1000000000    0.000000e+00     7.6567437451
+
+DOT_PRODUCT
+  Normal end of execution.
+
+DOT_PRODUCT
+  C/OpenMP version
+
+  A program which computes a vector dot product.
+
+  Number of processors available = 16
+  Number of threads =              2
+
+  Parallel    1000000000    0.000000e+00     3.9338178301
+
+DOT_PRODUCT
+  Normal end of execution.
+
+DOT_PRODUCT
+  C/OpenMP version
+
+  A program which computes a vector dot product.
+
+  Number of processors available = 16
+  Number of threads =              4
+
+  Parallel    1000000000    0.000000e+00     2.7072602060
+
+DOT_PRODUCT
+  Normal end of execution.

@@ -1,0 +1,171 @@
+# started on Sat Nov  3 06:47:28 2012
+
+
+ Performance counter stats for './mxm' (5 runs):
+
+     228664.387565 task-clock                #   14.400 CPUs utilized            ( +-  1.22% )
+            23,394 context-switches          #    0.000 M/sec                    ( +-  1.16% )
+                75 CPU-migrations            #    0.000 M/sec                    ( +- 51.45% )
+            70,502 page-faults               #    0.000 M/sec                    ( +- 10.56% )
+ 5,44,63,07,15,157 cycles                    #    2.382 GHz                      ( +-  1.22% ) [83.33%]
+ 4,43,64,92,35,222 stalled-cycles-frontend   #   81.46% frontend cycles idle     ( +-  1.54% ) [83.33%]
+   30,20,45,41,198 stalled-cycles-backend    #    5.55% backend  cycles idle     ( +-  1.47% ) [66.67%]
+ 3,86,49,04,23,287 instructions              #    0.71  insns per cycle        
+                                             #    1.15  stalled cycles per insn  ( +-  0.08% ) [83.33%]
+   16,64,39,90,620 branches                  #   72.788 M/sec                    ( +-  0.58% ) [83.33%]
+         85,64,575 branch-misses             #    0.05% of all branches          ( +-  1.03% ) [83.34%]
+
+      15.879388320 seconds time elapsed                                          ( +-  5.25% )
+
+# started on Sat Nov  3 06:48:47 2012
+
+
+ Performance counter stats for './mxm' (5 runs):
+
+     232929.115886 task-clock                #   15.917 CPUs utilized            ( +-  0.07% )
+            23,822 context-switches          #    0.000 M/sec                    ( +-  0.10% )
+                16 CPU-migrations            #    0.000 M/sec                    ( +-  3.66% )
+            83,421 page-faults               #    0.000 M/sec                    ( +-  0.30% )
+ 5,54,80,08,68,340 cycles                    #    2.382 GHz                      ( +-  0.07% ) [83.34%]
+ 4,53,78,61,74,019 stalled-cycles-frontend   #   81.79% frontend cycles idle     ( +-  0.06% ) [83.33%]
+   30,30,07,65,728 stalled-cycles-backend    #    5.46% backend  cycles idle     ( +-  0.97% ) [66.67%]
+ 3,86,64,11,77,952 instructions              #    0.70  insns per cycle        
+                                             #    1.17  stalled cycles per insn  ( +-  0.03% ) [83.33%]
+   16,68,67,18,229 branches                  #   71.639 M/sec                    ( +-  0.21% ) [83.33%]
+         87,08,037 branch-misses             #    0.05% of all branches          ( +-  0.51% ) [83.34%]
+
+      14.634412783 seconds time elapsed                                          ( +-  0.15% )
+
+# started on Sat Nov  3 06:50:00 2012
+
+
+ Performance counter stats for './mxm' (5 runs):
+
+     227618.568014 task-clock                #   14.589 CPUs utilized            ( +-  1.56% )
+            23,311 context-switches          #    0.000 M/sec                    ( +-  1.53% )
+                62 CPU-migrations            #    0.000 M/sec                    ( +- 45.04% )
+            70,697 page-faults               #    0.000 M/sec                    ( +- 11.84% )
+ 5,42,15,21,42,035 cycles                    #    2.382 GHz                      ( +-  1.56% ) [83.34%]
+ 4,40,89,02,18,846 stalled-cycles-frontend   #   81.32% frontend cycles idle     ( +-  1.94% ) [83.33%]
+   30,34,52,42,311 stalled-cycles-backend    #    5.60% backend  cycles idle     ( +-  1.18% ) [66.67%]
+ 3,86,91,45,32,933 instructions              #    0.71  insns per cycle        
+                                             #    1.14  stalled cycles per insn  ( +-  0.02% ) [83.33%]
+   16,76,80,05,286 branches                  #   73.667 M/sec                    ( +-  0.13% ) [83.33%]
+         85,38,947 branch-misses             #    0.05% of all branches          ( +-  1.35% ) [83.34%]
+
+      15.601599778 seconds time elapsed                                          ( +-  3.52% )
+
+# started on Sat Nov  3 06:51:18 2012
+
+
+ Performance counter stats for './mxm' (5 runs):
+
+     230129.970970 task-clock                #   15.341 CPUs utilized            ( +-  1.08% )
+            23,547 context-switches          #    0.000 M/sec                    ( +-  1.07% )
+                31 CPU-migrations            #    0.000 M/sec                    ( +- 41.64% )
+            78,314 page-faults               #    0.000 M/sec                    ( +-  8.91% )
+ 5,48,10,33,17,016 cycles                    #    2.382 GHz                      ( +-  1.07% ) [83.34%]
+ 4,46,88,74,63,239 stalled-cycles-frontend   #   81.53% frontend cycles idle     ( +-  1.34% ) [83.33%]
+   30,23,52,80,205 stalled-cycles-backend    #    5.52% backend  cycles idle     ( +-  0.16% ) [66.67%]
+ 3,86,98,85,26,518 instructions              #    0.71  insns per cycle        
+                                             #    1.15  stalled cycles per insn  ( +-  0.03% ) [83.33%]
+   16,78,39,78,102 branches                  #   72.933 M/sec                    ( +-  0.19% ) [83.33%]
+         85,35,727 branch-misses             #    0.05% of all branches          ( +-  1.43% ) [83.34%]
+
+      15.000725350 seconds time elapsed                                          ( +-  1.90% )
+
+# started on Sat Nov  3 06:52:33 2012
+
+
+ Performance counter stats for './mxm' (5 runs):
+
+     229918.868765 task-clock                #   15.208 CPUs utilized            ( +-  1.08% )
+            23,501 context-switches          #    0.000 M/sec                    ( +-  1.08% )
+                30 CPU-migrations            #    0.000 M/sec                    ( +- 50.00% )
+            77,051 page-faults               #    0.000 M/sec                    ( +-  8.73% )
+ 5,47,61,42,67,743 cycles                    #    2.382 GHz                      ( +-  1.08% ) [83.34%]
+ 4,46,88,99,96,029 stalled-cycles-frontend   #   81.61% frontend cycles idle     ( +-  1.37% ) [83.33%]
+   29,36,44,27,558 stalled-cycles-backend    #    5.36% backend  cycles idle     ( +-  0.89% ) [66.67%]
+ 3,86,01,88,55,836 instructions              #    0.70  insns per cycle        
+                                             #    1.16  stalled cycles per insn  ( +-  0.09% ) [83.33%]
+   16,50,82,04,765 branches                  #   71.800 M/sec                    ( +-  0.58% ) [83.33%]
+         85,67,976 branch-misses             #    0.05% of all branches          ( +-  0.46% ) [83.34%]
+
+      15.118183218 seconds time elapsed                                          ( +-  3.63% )
+
+# started on Sat Nov  3 06:53:49 2012
+
+
+ Performance counter stats for './mxm' (5 runs):
+
+     230233.670670 task-clock                #   15.391 CPUs utilized            ( +-  0.15% )
+            23,571 context-switches          #    0.000 M/sec                    ( +-  0.22% )
+                20 CPU-migrations            #    0.000 M/sec                    ( +- 14.14% )
+            81,634 page-faults               #    0.000 M/sec                    ( +-  1.07% )
+ 5,48,32,81,36,265 cycles                    #    2.382 GHz                      ( +-  0.15% ) [83.33%]
+ 4,47,14,40,08,530 stalled-cycles-frontend   #   81.55% frontend cycles idle     ( +-  0.18% ) [83.33%]
+   30,46,48,36,809 stalled-cycles-backend    #    5.56% backend  cycles idle     ( +-  0.93% ) [66.67%]
+ 3,86,95,22,28,732 instructions              #    0.71  insns per cycle        
+                                             #    1.16  stalled cycles per insn  ( +-  0.03% ) [83.34%]
+   16,76,97,97,442 branches                  #   72.838 M/sec                    ( +-  0.20% ) [83.33%]
+         84,56,045 branch-misses             #    0.05% of all branches          ( +-  0.47% ) [83.34%]
+
+      14.959402500 seconds time elapsed                                          ( +-  0.86% )
+
+# started on Sat Nov  3 06:55:04 2012
+
+
+ Performance counter stats for './mxm' (5 runs):
+
+     229503.404162 task-clock                #   14.987 CPUs utilized            ( +-  0.07% )
+            23,485 context-switches          #    0.000 M/sec                    ( +-  0.12% )
+                16 CPU-migrations            #    0.000 M/sec                    ( +-  3.02% )
+            84,509 page-faults               #    0.000 M/sec                    ( +-  0.37% )
+ 5,46,63,34,47,231 cycles                    #    2.382 GHz                      ( +-  0.07% ) [83.33%]
+ 4,45,40,62,93,879 stalled-cycles-frontend   #   81.48% frontend cycles idle     ( +-  0.08% ) [83.33%]
+   30,07,20,61,982 stalled-cycles-backend    #    5.50% backend  cycles idle     ( +-  0.27% ) [66.67%]
+ 3,87,04,08,98,654 instructions              #    0.71  insns per cycle        
+                                             #    1.15  stalled cycles per insn  ( +-  0.02% ) [83.34%]
+   16,79,72,65,472 branches                  #   73.190 M/sec                    ( +-  0.13% ) [83.33%]
+         84,73,726 branch-misses             #    0.05% of all branches          ( +-  0.39% ) [83.34%]
+
+      15.313181664 seconds time elapsed                                          ( +-  0.44% )
+
+# started on Sat Nov  3 06:56:20 2012
+
+
+ Performance counter stats for './mxm' (5 runs):
+
+     212358.315947 task-clock                #   12.886 CPUs utilized            ( +-  0.83% )
+            21,767 context-switches          #    0.000 M/sec                    ( +-  0.73% )
+                56 CPU-migrations            #    0.000 M/sec                    ( +- 31.15% )
+            70,437 page-faults               #    0.000 M/sec                    ( +- 11.65% )
+ 5,05,87,51,33,219 cycles                    #    2.382 GHz                      ( +-  0.83% ) [83.34%]
+ 4,04,18,68,25,433 stalled-cycles-frontend   #   79.90% frontend cycles idle     ( +-  1.05% ) [83.33%]
+   28,81,79,35,705 stalled-cycles-backend    #    5.70% backend  cycles idle     ( +-  0.30% ) [66.67%]
+ 3,87,06,89,37,831 instructions              #    0.77  insns per cycle        
+                                             #    1.04  stalled cycles per insn  ( +-  0.01% ) [83.33%]
+   16,81,25,08,042 branches                  #   79.170 M/sec                    ( +-  0.08% ) [83.33%]
+         81,37,621 branch-misses             #    0.05% of all branches          ( +-  0.64% ) [83.34%]
+
+      16.479788109 seconds time elapsed                                          ( +-  2.92% )
+
+# started on Sat Nov  3 06:57:43 2012
+
+
+ Performance counter stats for './mxm' (5 runs):
+
+     211630.393663 task-clock                #   11.426 CPUs utilized            ( +-  0.96% )
+            21,637 context-switches          #    0.000 M/sec                    ( +-  0.95% )
+                41 CPU-migrations            #    0.000 M/sec                    ( +- 43.68% )
+            76,254 page-faults               #    0.000 M/sec                    ( +-  8.65% )
+ 5,04,16,89,57,181 cycles                    #    2.382 GHz                      ( +-  0.95% ) [83.34%]
+ 4,02,45,52,09,785 stalled-cycles-frontend   #   79.83% frontend cycles idle     ( +-  1.21% ) [83.33%]
+   28,52,96,79,436 stalled-cycles-backend    #    5.66% backend  cycles idle     ( +-  0.54% ) [66.67%]
+ 3,87,03,92,63,151 instructions              #    0.77  insns per cycle        
+                                             #    1.04  stalled cycles per insn  ( +-  0.03% ) [83.33%]
+   16,80,68,42,651 branches                  #   79.416 M/sec                    ( +-  0.18% ) [83.33%]
+         79,92,660 branch-misses             #    0.05% of all branches          ( +-  0.67% ) [83.33%]
+
+      18.522168259 seconds time elapsed                                          ( +-  1.86% )
+

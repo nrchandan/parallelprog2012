@@ -1,0 +1,200 @@
+Run with 20 threads.
+# started on Sat Nov 10 10:08:38 2012
+
+
+ Performance counter stats for './prime' (5 runs):
+
+      73217.899277 task-clock                #    9.057 CPUs utilized            ( +-  3.28% )
+             7,720 context-switches          #    0.000 M/sec                    ( +-  3.27% )
+               101 CPU-migrations            #    0.000 M/sec                    ( +-  1.99% )
+               233 page-faults               #    0.000 M/sec                    ( +-  0.10% )
+ 1,74,35,80,15,077 cycles                    #    2.381 GHz                      ( +-  3.26% ) [83.33%]
+ 1,24,52,49,81,570 stalled-cycles-frontend   #   71.42% frontend cycles idle     ( +-  4.56% ) [83.33%]
+   36,43,11,90,355 stalled-cycles-backend    #   20.89% backend  cycles idle     ( +-  5.16% ) [66.67%]
+ 1,19,28,95,72,628 instructions              #    0.68  insns per cycle        
+                                             #    1.04  stalled cycles per insn  ( +-  0.00% ) [83.34%]
+   29,81,37,81,036 branches                  #  407.193 M/sec                    ( +-  0.00% ) [83.34%]
+         15,65,217 branch-misses             #    0.01% of all branches          ( +-  4.60% ) [83.34%]
+
+       8.083843387 seconds time elapsed                                          ( +-  2.76% )
+
+Run with 21 threads.
+# started on Sat Nov 10 10:09:18 2012
+
+
+ Performance counter stats for './prime' (5 runs):
+
+      74975.085721 task-clock                #    9.979 CPUs utilized            ( +-  1.49% )
+             7,939 context-switches          #    0.000 M/sec                    ( +-  1.24% )
+               116 CPU-migrations            #    0.000 M/sec                    ( +-  3.52% )
+               235 page-faults               #    0.000 M/sec                    ( +-  0.09% )
+ 1,78,54,66,48,183 cycles                    #    2.381 GHz                      ( +-  1.48% ) [83.33%]
+ 1,28,71,07,75,851 stalled-cycles-frontend   #   72.09% frontend cycles idle     ( +-  2.06% ) [83.32%]
+   37,94,23,21,359 stalled-cycles-backend    #   21.25% backend  cycles idle     ( +-  1.58% ) [66.66%]
+ 1,19,29,18,47,225 instructions              #    0.67  insns per cycle        
+                                             #    1.08  stalled cycles per insn  ( +-  0.01% ) [83.34%]
+   29,81,51,61,153 branches                  #  397.668 M/sec                    ( +-  0.00% ) [83.34%]
+         16,27,390 branch-misses             #    0.01% of all branches          ( +-  1.78% ) [83.34%]
+
+       7.513512523 seconds time elapsed                                          ( +-  2.51% )
+
+Run with 22 threads.
+# started on Sat Nov 10 10:09:56 2012
+
+
+ Performance counter stats for './prime' (5 runs):
+
+      76495.466152 task-clock                #    9.594 CPUs utilized            ( +-  0.94% )
+             8,252 context-switches          #    0.000 M/sec                    ( +-  1.23% )
+               108 CPU-migrations            #    0.000 M/sec                    ( +-  9.04% )
+               237 page-faults               #    0.000 M/sec                    ( +-  0.10% )
+ 1,82,14,16,66,933 cycles                    #    2.381 GHz                      ( +-  0.94% ) [83.33%]
+ 1,32,29,23,16,023 stalled-cycles-frontend   #   72.63% frontend cycles idle     ( +-  1.29% ) [83.32%]
+   39,07,78,75,611 stalled-cycles-backend    #   21.45% backend  cycles idle     ( +-  1.80% ) [66.67%]
+ 1,19,30,25,47,502 instructions              #    0.65  insns per cycle        
+                                             #    1.11  stalled cycles per insn  ( +-  0.00% ) [83.34%]
+   29,81,59,59,916 branches                  #  389.774 M/sec                    ( +-  0.00% ) [83.34%]
+         16,89,616 branch-misses             #    0.01% of all branches          ( +-  1.57% ) [83.34%]
+
+       7.973188333 seconds time elapsed                                          ( +-  4.33% )
+
+Run with 23 threads.
+# started on Sat Nov 10 10:10:36 2012
+
+
+ Performance counter stats for './prime' (5 runs):
+
+      76902.956900 task-clock                #    9.980 CPUs utilized            ( +-  2.12% )
+             8,234 context-switches          #    0.000 M/sec                    ( +-  0.98% )
+               117 CPU-migrations            #    0.000 M/sec                    ( +-  6.44% )
+               239 page-faults               #    0.000 M/sec                    ( +-  0.13% )
+ 1,83,09,02,90,835 cycles                    #    2.381 GHz                      ( +-  2.11% ) [83.33%]
+ 1,33,24,28,13,833 stalled-cycles-frontend   #   72.77% frontend cycles idle     ( +-  2.90% ) [83.32%]
+   40,00,35,05,564 stalled-cycles-backend    #   21.85% backend  cycles idle     ( +-  3.39% ) [66.67%]
+ 1,19,29,98,32,404 instructions              #    0.65  insns per cycle        
+                                             #    1.12  stalled cycles per insn  ( +-  0.00% ) [83.34%]
+   29,81,61,56,198 branches                  #  387.711 M/sec                    ( +-  0.01% ) [83.34%]
+         16,89,400 branch-misses             #    0.01% of all branches          ( +-  2.71% ) [83.34%]
+
+       7.705573398 seconds time elapsed                                          ( +-  3.58% )
+
+Run with 24 threads.
+# started on Sat Nov 10 10:11:14 2012
+
+
+ Performance counter stats for './prime' (5 runs):
+
+      75498.413807 task-clock                #   10.552 CPUs utilized            ( +-  2.65% )
+             8,186 context-switches          #    0.000 M/sec                    ( +-  1.77% )
+               127 CPU-migrations            #    0.000 M/sec                    ( +-  5.34% )
+               241 page-faults               #    0.000 M/sec                    ( +-  0.10% )
+ 1,79,75,77,13,093 cycles                    #    2.381 GHz                      ( +-  2.63% ) [83.33%]
+ 1,29,91,65,92,648 stalled-cycles-frontend   #   72.27% frontend cycles idle     ( +-  3.64% ) [83.32%]
+   38,60,51,41,114 stalled-cycles-backend    #   21.48% backend  cycles idle     ( +-  3.43% ) [66.67%]
+ 1,19,29,53,46,512 instructions              #    0.66  insns per cycle        
+                                             #    1.09  stalled cycles per insn  ( +-  0.01% ) [83.34%]
+   29,81,46,43,912 branches                  #  394.904 M/sec                    ( +-  0.00% ) [83.34%]
+         16,67,115 branch-misses             #    0.01% of all branches          ( +-  3.64% ) [83.34%]
+
+       7.155054308 seconds time elapsed                                          ( +-  1.86% )
+
+Run with 25 threads.
+# started on Sat Nov 10 10:11:50 2012
+
+
+ Performance counter stats for './prime' (5 runs):
+
+      76377.994424 task-clock                #   10.121 CPUs utilized            ( +-  2.10% )
+             8,393 context-switches          #    0.000 M/sec                    ( +-  1.91% )
+               123 CPU-migrations            #    0.000 M/sec                    ( +-  8.49% )
+               243 page-faults               #    0.000 M/sec                    ( +-  0.16% )
+ 1,81,81,50,04,870 cycles                    #    2.380 GHz                      ( +-  2.09% ) [83.32%]
+ 1,31,97,23,02,074 stalled-cycles-frontend   #   72.59% frontend cycles idle     ( +-  2.88% ) [83.32%]
+   39,14,69,06,751 stalled-cycles-backend    #   21.53% backend  cycles idle     ( +-  3.07% ) [66.67%]
+ 1,19,30,31,51,807 instructions              #    0.66  insns per cycle        
+                                             #    1.11  stalled cycles per insn  ( +-  0.01% ) [83.34%]
+   29,81,50,58,653 branches                  #  390.362 M/sec                    ( +-  0.00% ) [83.34%]
+         17,00,626 branch-misses             #    0.01% of all branches          ( +-  1.94% ) [83.34%]
+
+       7.546345666 seconds time elapsed                                          ( +-  3.07% )
+
+Run with 26 threads.
+# started on Sat Nov 10 10:12:28 2012
+
+
+ Performance counter stats for './prime' (5 runs):
+
+      75967.452685 task-clock                #   10.961 CPUs utilized            ( +-  2.91% )
+             8,405 context-switches          #    0.000 M/sec                    ( +-  1.73% )
+               139 CPU-migrations            #    0.000 M/sec                    ( +- 12.69% )
+               246 page-faults               #    0.000 M/sec                    ( +-  0.08% )
+ 1,80,88,03,39,814 cycles                    #    2.381 GHz                      ( +-  2.90% ) [83.33%]
+ 1,31,03,56,24,253 stalled-cycles-frontend   #   72.44% frontend cycles idle     ( +-  3.99% ) [83.32%]
+   39,15,63,98,701 stalled-cycles-backend    #   21.65% backend  cycles idle     ( +-  4.60% ) [66.66%]
+ 1,19,29,78,30,017 instructions              #    0.66  insns per cycle        
+                                             #    1.10  stalled cycles per insn  ( +-  0.01% ) [83.34%]
+   29,81,53,51,432 branches                  #  392.475 M/sec                    ( +-  0.00% ) [83.34%]
+         16,87,786 branch-misses             #    0.01% of all branches          ( +-  3.82% ) [83.34%]
+
+       6.930528712 seconds time elapsed                                          ( +-  3.20% )
+
+Run with 27 threads.
+# started on Sat Nov 10 10:13:03 2012
+
+
+ Performance counter stats for './prime' (5 runs):
+
+      81849.581133 task-clock                #   12.001 CPUs utilized            ( +-  1.16% )
+             8,709 context-switches          #    0.000 M/sec                    ( +-  1.60% )
+               193 CPU-migrations            #    0.000 M/sec                    ( +-  2.50% )
+               248 page-faults               #    0.000 M/sec                  
+ 1,94,81,30,62,640 cycles                    #    2.380 GHz                      ( +-  1.17% ) [83.33%]
+ 1,44,93,97,05,942 stalled-cycles-frontend   #   74.40% frontend cycles idle     ( +-  1.56% ) [83.32%]
+   43,50,63,74,795 stalled-cycles-backend    #   22.33% backend  cycles idle     ( +-  1.85% ) [66.66%]
+ 1,19,31,04,76,604 instructions              #    0.61  insns per cycle        
+                                             #    1.21  stalled cycles per insn  ( +-  0.00% ) [83.34%]
+   29,82,01,64,590 branches                  #  364.329 M/sec                    ( +-  0.00% ) [83.34%]
+         18,65,667 branch-misses             #    0.01% of all branches          ( +-  1.82% ) [83.34%]
+
+       6.820081301 seconds time elapsed                                          ( +-  2.16% )
+
+Run with 28 threads.
+# started on Sat Nov 10 10:13:37 2012
+
+
+ Performance counter stats for './prime' (5 runs):
+
+      78326.208945 task-clock                #   10.590 CPUs utilized            ( +-  1.69% )
+             8,559 context-switches          #    0.000 M/sec                    ( +-  1.90% )
+               155 CPU-migrations            #    0.000 M/sec                    ( +-  5.31% )
+               250 page-faults               #    0.000 M/sec                    ( +-  0.13% )
+ 1,86,45,43,56,082 cycles                    #    2.380 GHz                      ( +-  1.69% ) [83.33%]
+ 1,36,60,61,42,131 stalled-cycles-frontend   #   73.27% frontend cycles idle     ( +-  2.30% ) [83.32%]
+   40,89,01,44,944 stalled-cycles-backend    #   21.93% backend  cycles idle     ( +-  1.74% ) [66.67%]
+ 1,19,30,23,26,184 instructions              #    0.64  insns per cycle        
+                                             #    1.15  stalled cycles per insn  ( +-  0.00% ) [83.34%]
+   29,81,70,49,729 branches                  #  380.678 M/sec                    ( +-  0.00% ) [83.34%]
+         17,40,136 branch-misses             #    0.01% of all branches          ( +-  2.12% ) [83.34%]
+
+       7.396495772 seconds time elapsed                                          ( +-  4.30% )
+
+Run with 29 threads.
+# started on Sat Nov 10 10:14:14 2012
+
+
+ Performance counter stats for './prime' (5 runs):
+
+      78210.357826 task-clock                #   10.724 CPUs utilized            ( +-  2.46% )
+             8,678 context-switches          #    0.000 M/sec                    ( +-  0.97% )
+               162 CPU-migrations            #    0.000 M/sec                    ( +-  9.61% )
+               252 page-faults               #    0.000 M/sec                    ( +-  0.10% )
+ 1,86,20,27,91,492 cycles                    #    2.381 GHz                      ( +-  2.45% ) [83.33%]
+ 1,36,34,87,79,252 stalled-cycles-frontend   #   73.23% frontend cycles idle     ( +-  3.34% ) [83.32%]
+   40,81,66,49,256 stalled-cycles-backend    #   21.92% backend  cycles idle     ( +-  3.84% ) [66.67%]
+ 1,19,30,31,26,775 instructions              #    0.64  insns per cycle        
+                                             #    1.14  stalled cycles per insn  ( +-  0.00% ) [83.34%]
+   29,81,78,60,045 branches                  #  381.252 M/sec                    ( +-  0.00% ) [83.34%]
+         17,97,543 branch-misses             #    0.01% of all branches          ( +-  3.06% ) [83.35%]
+
+       7.292777111 seconds time elapsed                                          ( +-  2.33% )
+

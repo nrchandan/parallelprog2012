@@ -1,0 +1,22 @@
+
+MXM
+  C/OpenMP version.
+
+  Matrix multiplication tests.
+
+  Number of processors available = 16
+  Number of threads =              12
+  Scheduling Policy =              Dynamic
+  Chunk Size =                     1
+
+R8_MXM matrix multiplication timing.
+  A(LxN) = B(LxM) * C(MxN).
+  L = 2000
+  M = 2000
+  N = 2000
+  Floating point OPS roughly -1179869184
+  Elapsed time dT = 16.300430
+  Rate = MegaOPS/dT = -72.382701
+
+MXM:
+  Normal end of execution.
