@@ -1,4 +1,5 @@
 # include <stdlib.h>
+# include <string.h>
 # include <stdio.h>
 # include <math.h>
 # include <omp.h>
@@ -43,6 +44,10 @@ int main ( int argc, char *argv[] )
   double xdoty;
   double *y;
 
+  omp_sched_t myschedule;
+  char schedstring[20];
+  int mychunk;
+
   printf ( "\n" );
   printf ( "DOT_PRODUCT\n" );
   printf ( "  C/OpenMP version\n" );
@@ -52,6 +57,25 @@ int main ( int argc, char *argv[] )
   printf ( "\n" );
   printf ( "  Number of processors available = %d\n", omp_get_num_procs ( ) );
   printf ( "  Number of threads =              %d\n", omp_get_max_threads ( ) );
+
+  omp_get_schedule ( &myschedule, &mychunk );
+  switch (myschedule) {
+    case omp_sched_static:
+                 strcpy(schedstring, "Static");
+                 break;
+    case omp_sched_dynamic:
+                 strcpy(schedstring, "Dynamic");
+                 break;
+    case omp_sched_guided:
+                 strcpy(schedstring, "Guided");
+                 break;
+    case omp_sched_auto:
+                 strcpy(schedstring, "Auto");
+                 break;
+  }
+  printf ( "  Scheduling Policy =              %s\n", schedstring );
+  printf ( "  Chunk Size =                     %d\n", mychunk );
+
 /*
   Set up the vector data.
   N may be increased to get better timing data.
