@@ -1,4 +1,5 @@
 # include <stdlib.h>
+# include <string.h>
 # include <stdio.h>
 # include <omp.h>
 
@@ -37,6 +38,9 @@ int main ( int argc, char *argv[] )
   int n_factor;
   int n_hi;
   int n_lo;
+  omp_sched_t myschedule;
+  char schedstring[20];
+  int mychunk;
 
   printf ( "\n" );
   printf ( "PRIME_OPENMP\n" );
@@ -46,6 +50,23 @@ int main ( int argc, char *argv[] )
   printf ( "  Number of processors available = %d\n", omp_get_num_procs ( ) );
   printf ( "  Number of threads =              %d\n", omp_get_max_threads ( ) );
 
+  omp_get_schedule ( &myschedule, &mychunk );
+  switch (myschedule) {
+    case omp_sched_static:
+                 strcpy(schedstring, "Static");
+                 break;
+    case omp_sched_dynamic:
+                 strcpy(schedstring, "Dynamic");
+                 break;
+    case omp_sched_guided:
+                 strcpy(schedstring, "Guided");
+                 break;
+    case omp_sched_auto:
+                 strcpy(schedstring, "Auto");
+                 break;
+  }
+  printf ( "  Scheduling Policy =              %s\n", schedstring );
+  printf ( "  Chunk Size =                     %d\n", mychunk );
 /*
   n_lo = 1;
   n_hi = 131072;

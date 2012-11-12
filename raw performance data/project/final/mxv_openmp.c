@@ -1,4 +1,5 @@
 # include <stdlib.h>
+# include <string.h>
 # include <stdio.h>
 # include <time.h>
 # include <omp.h>
@@ -36,6 +37,9 @@ int main ( void )
   int i;
   int m;
   int n;
+  omp_sched_t myschedule;
+  char schedstring[20];
+  int mychunk;
 
   timestamp ( );
 
@@ -48,13 +52,31 @@ int main ( void )
   printf ( "  Number of processors available = %d\n", omp_get_num_procs ( ) );
   printf ( "  Number of threads =              %d\n", omp_get_max_threads ( ) );
 
-  printf ( "\n" );
-  printf ( "  Compare various algorithms:\n" );
-  printf ( "\n" );
-  printf ( "  MXV_PLAIN          - plain MxV coding.\n" );
-  printf ( "  MXV_PLAIN_OPENMP  - plain MxV coding + OpenMP.\n" );
+  omp_get_schedule ( &myschedule, &mychunk );
+  switch (myschedule) {
+    case omp_sched_static:
+                 strcpy(schedstring, "Static");
+                 break;
+    case omp_sched_dynamic:
+                 strcpy(schedstring, "Dynamic");
+                 break;
+    case omp_sched_guided:
+                 strcpy(schedstring, "Guided");
+                 break;
+    case omp_sched_auto:
+                 strcpy(schedstring, "Auto");
+                 break;
+  }
+  printf ( "  Scheduling Policy =              %s\n", schedstring );
+  printf ( "  Chunk Size =                     %d\n", mychunk );
+
+//  printf ( "  Compare various algorithms:\n" );
+//  printf ( "\n" );
+//  printf ( "  MXV_PLAIN          - plain MxV coding.\n" );
+//  printf ( "  MXV_PLAIN_OPENMP  - plain MxV coding + OpenMP.\n" );
   printf ( "\n" );
   printf ( "  Algorithm                  M         N      Seconds\n" );
+
 
   m = 10000;
   n = 10000;
