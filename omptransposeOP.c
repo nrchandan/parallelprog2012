@@ -124,7 +124,8 @@ void transpose(int *a, int *b, int M, int N, int m, int n)
 {
     int i, j;
 
-    #pragma omp parallel for    
+    #pragma omp parallel default (none) shared (a,b,M,N,m,n,i) private (j)
+    #pragma omp for    
     for (i=0; i<m; i++) {
         for (j=0; j<n; j++) {
             *A(b,M,j,i)=*A(a,N,i,j);
