@@ -15,6 +15,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
+#include<omp.h>
 
 #define LENGTH 64
 
@@ -110,8 +111,9 @@ int main(int argc, char *argv[])
 void transpose(int *m, int s, int n) 
 {
     int i, j, temp;
-   
-    #pragma omp parallel for 
+
+    #pragma omp parallel default (none) shared (m,n,s,i) private (j,temp)  
+    #pragma omp for 
     for (i=0; i<s; i++) {
         for (j=i+1; j<s; j++) {
             temp = *M(m,n,i,j);
